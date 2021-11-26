@@ -1,0 +1,17 @@
+[user]
+	email = richard.m.hajek@gmail.com
+	name = Richard Hajek
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[core]
+	excludesFile = ~/.gitignore
+	editor = nvim
+	pager = cat
+[alias]
+	lg = log --oneline
+	cat = cat-file -p

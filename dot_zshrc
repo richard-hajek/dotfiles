@@ -1,0 +1,88 @@
+echo "Sourcing ~/.zshrc"
+
+# Pacman Refresh
+TRAPUSR1() { rehash }
+
+setopt extendedglob
+setopt COMPLETE_ALIASES
+setopt no_share_history
+unsetopt share_history
+
+if [[ -d /usr/share/oh-my-zsh/ ]]; then
+	export ZSH=/usr/share/oh-my-zsh/
+else
+	export ZSH=~/.oh-my-zsh
+fi
+
+ZSH_THEME=robbyrussell
+CASE_SENSITIVE="true"
+
+plugins=(
+	archlinux
+	asdf
+	bundler
+	docker
+	jsontools
+	vscode
+	web-search
+	tig
+	#kubectl
+	gitfast
+	colored-man-pages
+	colorize
+	command-not-found
+	cp
+	dirhistory
+	autojump
+	sudo
+	rails
+	git
+	# git-prompt
+	# ruby
+	#zsh-syntax-highlighting
+	)
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+typeset -gA ZSH_HIGHLIGHT_STYLES
+
+source $ZSH/oh-my-zsh.sh
+
+wal -e --theme sexy-gjm --vte > /dev/null
+
+. ~/.config/shellrc
+
+
+chezmoi status
+
+setopt no_share_history
+unsetopt share_history
+
+alias ros2='[ -z $ROS_SOURCED ] && . /opt/ros/eloquent/setup.zsh; ROS_SOURCED=1; ros2 "$@"'
+alias crow='. install/setup.zsh'
+alias pipeline='/home/richard-hajek/Cloud/Projects/just-compose/src/just_compose/main.py /home/richard-hajek/Cloud/Projects/just-compose/examples/just-compose_ros.yaml'
+alias python="python3"
+alias pip="pip3"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/meowxiik/.local/share/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/meowxiik/.local/share/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/meowxiik/.local/share/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/meowxiik/.local/share/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+which fuck > /dev/null && eval $(thefuck --alias)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(pyenv init -)"

@@ -1,0 +1,10 @@
+[Unit]
+Description=Guake Terminal
+
+[Service]
+ExecStart=/usr/bin/redshift -l '50:14' -b '0.8:1'
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

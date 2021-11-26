@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+bin="$HOME/Cloud/Scripts"
+PATH="${bin}:${PATH}"
+
+for folder in `find -L "$bin"`; do
+	[ -d "$folder" ] && PATH="${folder}:${PATH}"
+done
+
+export PATH
