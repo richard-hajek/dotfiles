@@ -12,6 +12,10 @@ export SHELL_SOURCED=1
 #source `which user-path-gen`
 source "${HOME}/.local/bin/user-path-gen"
 
+if [[ -f "$HOME/.config/bitwarden" ]]; then
+	. "$HOME/.config/bitwarden"
+fi
+
 function cd () {
     builtin cd "$@" && ls --color=auto --group-directories-first
 }

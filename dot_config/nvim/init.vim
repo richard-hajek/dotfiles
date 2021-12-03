@@ -238,10 +238,10 @@ if has('win32')
 	set undodir=$HOME/Temp/_vim/undo,/Temp/_vim/undo
 	set viewdir=$HOME/Temp/_vim/view,/Temp/_vim/view
 elseif has('unix')
-	set directory=$HOME/cache/.vim,/var/tmp,/tmp
-	set backupdir=$HOME/cache/.vim/backup,/var/tmp/vim-backup,/tmp/vim-backup
-	set undodir=$HOME/cache/.vim/undo,/var/tmp/vim-undo,/tmp/vim-undo
-	set viewdir=$HOME/cache/.vim/view,/var/tmp/vim-view,/tmp/vim-view
+	set directory=$HOME/.cache/vim,/var/tmp,/tmp
+	set backupdir=$HOME/.cache/vim/backup,/var/tmp/vim-backup,/tmp/vim-backup
+	set undodir=$HOME/.cache/vim/undo,/var/tmp/vim-undo,/tmp/vim-undo
+	set viewdir=$HOME/.cache/vim/view,/var/tmp/vim-view,/tmp/vim-view
 endif
 
 " Make directories if they don't exist

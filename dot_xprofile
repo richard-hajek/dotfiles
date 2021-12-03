@@ -2,3 +2,4 @@ echo "Sourcing .xprofile"
 
 . ~/.profile
 wallpaper-select
+setxkbmap cz -variant coder
