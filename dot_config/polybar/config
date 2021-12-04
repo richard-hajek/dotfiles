@@ -81,7 +81,7 @@ monitor =
 
 modules-left = i3 right-end-bottom left-end-top xwindow right-end-bottom
 modules-center = left-end-top date right-end-bottom
-modules-right = left-end-top volume right-end-bottom left-end-bottom network-speed right-end-top left-end-top wifi eth right-end-bottom left-end-top
+modules-right = left-end-top volume right-end-bottom left-end-bottom cpu memory battery network-speed right-end-top left-end-top wifi eth right-end-bottom left-end-top
 
 tray-background = ${color.module-bg}
 tray-padding = ${layout.module-padding}
