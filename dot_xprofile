@@ -3,3 +3,6 @@ echo "Sourcing .xprofile"
 . ~/.profile
 wallpaper-select
 setxkbmap cz -variant coder
+
+picom &
+xinput set-prop 'Asus TouchPad' 'libinput Tapping Enabled' 1
