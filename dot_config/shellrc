@@ -17,15 +17,13 @@ session_file=/tmp/MEOWXIIK_BW_SESSION
 if [[ ! -f $session_file ]] && [[ $- == *i* ]]; then
 
 	#bw login meowxiik+dotfiles@gmail.com
-	SESSION=$(bw unlock | grep "export BW_SESSION" | sed 's/^$ export BW_SESSION=//g' )
-	echo "export BW_SESSION=$SESSION" > $session_file
+	SESSION=$(bw unlock | grep "export BW_SESSION" | sed 's/^$ export BW_SESSION=//g' | tr -d \" )
+	echo "export BW_SESSION=\"$SESSION\"" > $session_file
 
 	chmod 600 $session_file
 fi
 
-if [[ -f "/tmp/MEOWXIIK_BW_SESSION" ]]; then
-	. "/tmp/MEOWXIIK_BW_SESSION"
-fi
+[[ -f "$session_file" ]] && . "$session_file"
 
 function cd () {
     builtin cd "$@" && ls --color=auto --group-directories-first
