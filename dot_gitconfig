@@ -15,7 +15,7 @@
 [alias]
 	lg = log --oneline
 	cat = cat-file -p
-	acommit = !"TMPFILE=$(mktemp -t git-commit-status-message); \
+	acommit = !"TMPFILE=$(mktemp -t git-commit-status-messageXXX); \
         git status --porcelain \
         | sort \
         | sed -re '/^\\?\\?[[:space:]]/d' -e '/^[[:space:]]+[[:upper:]]/d' \
