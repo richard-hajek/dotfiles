@@ -78,6 +78,8 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_DATA_HOME="${HOME}/.local/share"
 
 export PATH=$PATH:/home/$USER/.local/bin
+export PATH="$PATH:."
+
 export TERMINAL=terminator
 export BROWSER=firefox
 export EDITOR=nvim
