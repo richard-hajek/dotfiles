@@ -14,6 +14,14 @@ source "${HOME}/.local/bin/user-path-gen"
 
 session_file=/tmp/MEOWXIIK_BW_SESSION
 
+if [[ -f $session_file ]]; then
+	source $session_file
+
+	if [[ -z "BW_SESSION" ]]; then
+		rm $session_file
+	fi
+fi
+
 if [[ ! -f $session_file ]] && [[ $- == *i* ]]; then
 
 	#bw login meowxiik+dotfiles@gmail.com
