@@ -33,7 +33,7 @@ plugins=(
 	command-not-found
 	cp
 	dirhistory
-	autojump
+	#autojump
 	sudo
 	rails
 	git
