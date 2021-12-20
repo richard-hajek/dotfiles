@@ -66,6 +66,7 @@ alias dotfiles="chezmoi"
 alias clip="xclip -i -sel clipboard"
 
 alias ldo="lazydocker"
+alias lzd="lazydocker"
 
 alias yayforce="yay --mflags \"--nocheck --skippgpcheck --skipchecksums\""
 

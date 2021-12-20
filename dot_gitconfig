@@ -1,6 +1,6 @@
 [user]
 	email = richard.m.hajek@gmail.com
-	name = Richard Hajek
+    name = Richard Hajek
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -30,3 +30,5 @@
         | sed -re 's/^[[:space:]]*//g' > $TMPFILE; \
         git commit -F $TMPFILE; \
         rm -f $TMPFILE"
+[commit]
+	verbose = true
