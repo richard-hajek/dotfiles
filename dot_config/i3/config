@@ -144,17 +144,16 @@ assign [class="(?i)obsidian"] 10
 assign [class="(?i)firefox"] 2
 
 assign [class="(?i)jetbrains"] 3
+assign [class="(?i)anki"] 3
 
+assign [class="(?i)gimp"] 4
 assign [class="(?i)zenity"] 4
 assign [class="(?i)devdocs-desktop"]4
 
 assign [class="(?i)discord"] 5
 assign [class="(?i)clickup"] 5
 assign [class="(?i)slack"] 5
-#
-#for_window [workspace=$ws2] layout tabbed
+
 for_window [class="Technic Launcher"] floating enable
-# Jetbrains annoying title windows
-#for_window [title="win0"] move schratchpad
 for_window [title="win0"] floating enable
 for_window [class="feh" title="qr_code"] floating enable

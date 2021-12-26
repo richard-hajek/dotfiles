@@ -51,13 +51,6 @@ wal -e --theme sexy-gjm --vte > /dev/null
 
 . ~/.config/shellrc
 
-(
-(
-OUTPUT=$(chezmoi status)
-[[ ! -z ${OUTPUT} ]] && echo $OUTPUT
-)&
-)
-
 setopt no_share_history
 unsetopt share_history
 
