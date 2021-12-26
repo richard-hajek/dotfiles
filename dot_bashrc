@@ -28,7 +28,18 @@ source "$BASH_IT"/bash_it.sh
 eval "$(pyenv init -)"
 
 non_local_prompt() {
-	PS1="\u \$(cat /etc/layer) ${PS1}"
+
+	prePS1=
+
+	if [[ $USER != "meowxiik" ]]; then
+		prePS1="\u "
+	fi
+
+	if [[ -f /etc/layer ]] && [[ $(cat /etc/layer) != *runtime* ]]; then
+		prePS1="${prePS1}\$(cat /etc/layer)"
+	fi
+
+	PS1="${prePS1} ${PS1}"
 }
 
 if [[ $USER != "meowxiik" ]] || [[ $(cat /etc/layer) != *runtime* ]]; then
