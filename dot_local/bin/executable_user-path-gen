@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-bin="$HOME/Cloud/Scripts"
-PATH="${bin}:${PATH}"
+PATH="${PATH}"
+bin="${HOME}/.local/bin"
 
-for folder in `find -L "$bin"`; do
+for folder in `find -L $bin`; do
 	[ -d "$folder" ] && PATH="${folder}:${PATH}"
 done
 
