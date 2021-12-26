@@ -19,7 +19,7 @@ shopt -s histappend
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 # bash_it config
-export BASH_IT="/home/meowxiik/.bash_it"
+export BASH_IT="${HOME}/.bash_it"
 export BASH_IT_THEME='minimal'
 export SCM_CHECK=true
 source "$BASH_IT"/bash_it.sh
