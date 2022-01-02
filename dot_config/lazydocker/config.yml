@@ -1,3 +1,14 @@
 reporting: "on"
 gui:
   returnImmediately: true
+customCommands:
+  containers:
+    - name: bash2
+      attach: true
+      command: docker exec -it {{ .Container.ID }} sh
+      serviceNames: []
+    - name: bash
+      attach: true
+      command: "docker exec -it {{ .Container.ID }} /bin/sh -c 'eval $(grep ^$(id -un): /etc/passwd | cut -d : -f 7-)'"
+      serviceNames: []
+
