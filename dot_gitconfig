@@ -30,5 +30,6 @@
         | sed -re 's/^[[:space:]]*//g' > $TMPFILE; \
         git commit -F $TMPFILE; \
         rm -f $TMPFILE"
+	cauto = acommit
 [commit]
 	verbose = true
