@@ -12,7 +12,7 @@ export SHELL_SOURCED=1
 #source `which user-path-gen`
 source "${HOME}/.local/bin/user-path-gen"
 
-if which bw >/dev/null && [[ $USER != "root" ]]; then
+if which bw >/dev/null && [[ $USER != "root" ]] && false; then
 
 	session_file=/tmp/MEOWXIIK_BW_SESSION
 
