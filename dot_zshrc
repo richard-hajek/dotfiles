@@ -51,6 +51,8 @@ wal -e --theme sexy-gjm --vte > /dev/null
 
 . ~/.config/shellrc
 
+( chezmoi status )&
+
 setopt no_share_history
 unsetopt share_history
 

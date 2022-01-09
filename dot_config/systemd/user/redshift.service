@@ -2,7 +2,7 @@
 Description=Guake Terminal
 
 [Service]
-ExecStart=/usr/bin/redshift -l '50:14' -b '0.8:1'
+ExecStart=/usr/bin/redshift -l '50:14' -b '0.8:0.8'
 Restart=always
 RestartSec=3
 

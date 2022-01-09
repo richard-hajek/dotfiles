@@ -10,3 +10,5 @@ image/jpeg=firefox.desktop
 [Added Associations]
 image/png=firefox.desktop;
 image/jpeg=firefox.desktop;
+application/pdf=firefox.desktop;
+image/octet-stream=gimp.desktop;

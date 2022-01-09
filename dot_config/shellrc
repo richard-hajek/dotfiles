@@ -12,7 +12,7 @@ export SHELL_SOURCED=1
 #source `which user-path-gen`
 source "${HOME}/.local/bin/user-path-gen"
 
-if which bw >/dev/null && [[ $USER != "root" ]] && false; then
+if which bw >/dev/null && [[ $USER != "root" ]]; then
 
 	session_file=/tmp/MEOWXIIK_BW_SESSION
 
@@ -26,8 +26,16 @@ if which bw >/dev/null && [[ $USER != "root" ]] && false; then
 
 	if [[ ! -f $session_file ]] && [[ $- == *i* ]]; then
 
+		if [[ ! -f ~/.cache/dotfiles_pass ]]; then
+			echo -n "Please enter dotfiles password: "
+			read -s password
+			echo
+			# Run Command
+			echo $password >	 ~/.cache/dotfiles_pass
+		fi
+
 		#bw login meowxiik+dotfiles@gmail.com
-		SESSION=$(bw unlock | grep "export BW_SESSION" | sed 's/^$ export BW_SESSION=//g' | tr -d \" )
+		SESSION=$(bw unlock < ~/.cache/dotfiles_pass | grep "export BW_SESSION" | sed 's/^$ export BW_SESSION=//g' | tr -d \" )
 		echo "export BW_SESSION=\"$SESSION\"" > $session_file
 
 		chmod 600 $session_file
@@ -73,6 +81,7 @@ alias ldo="lazydocker"
 alias lzd="lazydocker"
 
 alias yayforce="yay --mflags \"--nocheck --skippgpcheck --skipchecksums\""
+alias yay="PKGEXT=.pkg.tar yay"
 
 alias grep="grep --color=auto"
 alias ls='ls --color=auto --group-directories-first'
