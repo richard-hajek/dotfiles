@@ -8,14 +8,15 @@ setopt COMPLETE_ALIASES
 setopt no_share_history
 unsetopt share_history
 
-
-if [[ -d /usr/share/oh-my-zsh/ ]]; then
-	export ZSH=/usr/share/oh-my-zsh/
-elif [[ -d ~/.oh-my-zsh ]]; then
+unset ZSH
+if [[ -f /usr/share/oh-my-zsh/oh-my-zsh.sh ]]; then
+	export ZSH='/usr/share/oh-my-zsh'
+elif [[ -f ~/.oh-my-zsh/oh-my-zsh.sh ]]; then
 	export ZSH=~/.oh-my-zsh
 fi
 
-if [[ ! -z $ZSH ]]; then
+if [[ ! -z ${ZSH+x} ]]; then
+	echo Found OhMYZSH in $ZSH
 	ZSH_THEME=robbyrussell
 	CASE_SENSITIVE="true"
 
@@ -51,7 +52,7 @@ if [[ ! -z $ZSH ]]; then
 fi
 
 
-if hash wal &> /dev/null; then
+if hash wal &> /dev/null && hash pyenv &> /dev/null; then
 	wal -e --theme sexy-gjm --vte > /dev/null
 fi
 

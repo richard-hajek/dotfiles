@@ -1,1 +1,4 @@
-eval "$(pyenv init --path)"
+
+if hash pyenv &> /dev/null; then
+	eval "$(pyenv init --path)"
+fi
