@@ -16,7 +16,6 @@ elif [[ -f ~/.oh-my-zsh/oh-my-zsh.sh ]]; then
 fi
 
 if [[ ! -z ${ZSH+x} ]]; then
-	echo Found OhMYZSH in $ZSH
 	ZSH_THEME=robbyrussell
 	CASE_SENSITIVE="true"
 
