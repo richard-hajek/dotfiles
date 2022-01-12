@@ -155,6 +155,7 @@ assign [class="(?i)devdocs-desktop"]4
 assign [class="(?i)discord"] 5
 assign [class="(?i)clickup"] 5
 assign [class="(?i)slack"] 5
+assign [class="(?i)microsoft teams - preview"] 5
 
 for_window [class="Technic Launcher"] floating enable
 for_window [title="win0"] floating enable
