@@ -31,7 +31,7 @@ if which bw >/dev/null && [[ $USER != "root" ]]; then
 			read -s password
 			echo
 			# Run Command
-			echo $password >	 ~/.cache/dotfiles_pass
+			echo $password > ~/.cache/dotfiles_pass
 		fi
 
 		#bw login meowxiik+dotfiles@gmail.com

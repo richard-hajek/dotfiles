@@ -58,7 +58,9 @@ fi
 . ~/.config/shellrc
 
 if hash chezmoi &> /dev/null; then
-	( ( chezmoi status  ) & )
+	( (
+		notify-send "Chezmoi" "$(chezmoi diff 2>&1)"
+	) & )
 fi
 
 
