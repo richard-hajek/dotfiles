@@ -35,6 +35,7 @@ if which bw >/dev/null && [[ $USER != "root" ]]; then
 		fi
 
 		#bw login meowxiik+dotfiles@gmail.com
+		echo Unlocking vault
 		SESSION=$(bw unlock < ~/.cache/dotfiles_pass | grep "export BW_SESSION" | sed 's/^$ export BW_SESSION=//g' | tr -d \" )
 		echo "export BW_SESSION=\"$SESSION\"" > $session_file
 

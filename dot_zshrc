@@ -59,7 +59,12 @@ fi
 
 if hash chezmoi &> /dev/null; then
 	( (
-		notify-send "Chezmoi" "$(chezmoi diff 2>&1)"
+	OUTPUT=$(chezmoi status 2>&1)
+
+	if [[ ! -z "${OUTPUT// }" ]]; then
+		notify-send "Chezmoi" "$OUTPUT"
+	fi
+
 	) & )
 fi
 
