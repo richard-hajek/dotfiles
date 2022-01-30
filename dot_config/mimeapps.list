@@ -7,6 +7,7 @@ x-scheme-handler/unknown=firefox.desktop
 x-scheme-handler/etcher=balena-etcher-electron.desktop
 image/jpeg=firefox.desktop
 x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/discord-389176180877688832=discord-389176180877688832.desktop
 
 [Added Associations]
 image/png=firefox.desktop;
