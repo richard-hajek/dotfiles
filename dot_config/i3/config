@@ -150,6 +150,7 @@ assign [class="(?i)nemo"] 3
 
 assign [class="(?i)gimp"] 4
 assign [class="(?i)zenity"] 4
+assign [title="(?i)steam"] 4
 assign [class="(?i)steam"] 4
 assign [class="(?i)devdocs-desktop"]4
 assign [class="(?i)net-technicpack-launcher-launchermain"]4
