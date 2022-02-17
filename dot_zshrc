@@ -113,3 +113,4 @@ unset __conda_setup
 
 fi
 
+source /usr/share/nvm/init-nvm.sh
