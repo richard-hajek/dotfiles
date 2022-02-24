@@ -25,7 +25,10 @@ export SCM_CHECK=true
 source "$BASH_IT"/bash_it.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-eval "$(pyenv init -)"
+
+if hash pyenv &> /dev/null; then
+  eval "$(pyenv init -)"
+fi
 
 non_local_prompt() {
 

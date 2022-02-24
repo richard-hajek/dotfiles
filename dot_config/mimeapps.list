@@ -12,6 +12,7 @@ text/x-cmake=gvim.desktop
 text/plain=gvim.desktop
 application/xml=gvim.desktop
 application/rdf+xml=gvim.desktop
+x-scheme-handler/jetbrains-gateway=jetbrains-gateway.desktop
 
 [Added Associations]
 image/png=firefox.desktop;
