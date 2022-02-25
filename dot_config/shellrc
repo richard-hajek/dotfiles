@@ -108,6 +108,10 @@ export PATH=$PATH:/home/meowxiik/.local/share/gem/ruby/3.0.0/bin
 export PATH="$PATH:."
 export PATH="$PATH:/usr/local/bin"
 
+if [[ -f ~/Cloud/Software/distrobox/distrobox ]]; then
+  export PATH=$PATH:/home/$USER/Cloud/Software/distrobox/
+fi
+
 export TERMINAL=terminator
 export BROWSER=firefox
 export EDITOR=nvim
