@@ -29,7 +29,7 @@ if [[ ! -z ${ZSH+x} ]]; then
 		# web-search
 		# tig
 		# kubectl
-		# gitfast
+	  #	gitfast
 		# colored-man-pages
 		# colorize
 		# command-not-found
@@ -41,7 +41,6 @@ if [[ ! -z ${ZSH+x} ]]; then
 		# git
 		# git-prompt
 		# ruby
-		# zsh-syntax-highlighting
 		)
 
 	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
