@@ -20,28 +20,28 @@ if [[ ! -z ${ZSH+x} ]]; then
 	CASE_SENSITIVE="true"
 
 	plugins=(
-		archlinux
-		asdf
-		bundler
-		docker
-		jsontools
-		vscode
-		web-search
-		tig
-		#kubectl
-		gitfast
-		colored-man-pages
-		colorize
-		command-not-found
-		cp
-		dirhistory
-		#autojump
-		sudo
-		rails
-		git
+		# archlinux
+		# asdf
+		# bundler
+		# docker
+		# jsontools
+		# vscode
+		# web-search
+		# tig
+		# kubectl
+		# gitfast
+		# colored-man-pages
+		# colorize
+		# command-not-found
+		# cp
+		# dirhistory
+		# autojump
+		# sudo
+		# rails
+		# git
 		# git-prompt
 		# ruby
-		#zsh-syntax-highlighting
+		# zsh-syntax-highlighting
 		)
 
 	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
