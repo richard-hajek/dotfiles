@@ -13,6 +13,9 @@ text/plain=gvim.desktop
 application/xml=gvim.desktop
 application/rdf+xml=gvim.desktop
 x-scheme-handler/jetbrains-gateway=jetbrains-gateway.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-6JMOI1.desktop
+message/rfc822=userapp-Thunderbird-6JMOI1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-6JMOI1.desktop
 
 [Added Associations]
 image/png=firefox.desktop;
@@ -23,3 +26,6 @@ text/x-cmake=gvim.desktop;
 text/plain=gvim.desktop;
 application/xml=gvim.desktop;
 application/rdf+xml=gvim.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-6JMOI1.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-6JMOI1.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=firefox.desktop;
