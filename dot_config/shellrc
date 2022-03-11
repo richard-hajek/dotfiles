@@ -76,6 +76,7 @@ alias p="ipython"
 alias dei="docker exec -it"
 alias dotfiles="chezmoi"
 alias clip="xclip -i -sel clipboard"
+alias sdr="systemctl daemon-reload"
 
 alias ldo="lazydocker"
 alias lzd="lazydocker"
