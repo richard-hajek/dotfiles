@@ -77,6 +77,7 @@ alias dei="docker exec -it"
 alias dotfiles="chezmoi"
 alias clip="xclip -i -sel clipboard"
 alias sdr="systemctl daemon-reload"
+alias sudo='sudo '
 alias s="systemctl"
 alias j="journalctl"
 
