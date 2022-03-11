@@ -80,6 +80,7 @@ alias sdr="systemctl daemon-reload"
 alias sudo='sudo '
 alias s="systemctl"
 alias j="journalctl"
+alias walr="cat /home/meowxiik/.cache/wal/sequences"
 
 alias ldo="lazydocker"
 alias lzd="lazydocker"
