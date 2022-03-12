@@ -147,6 +147,7 @@ assign [class="(?i)firefox"] 2
 assign [class="(?i)jetbrains"] 3
 assign [class="(?i)anki"] 3
 assign [class="(?i)nemo"] 3
+assign [class="(?i)thunderbird"] 3
 
 assign [class="(?i)gimp"] 4
 assign [class="(?i)zenity"] 4
