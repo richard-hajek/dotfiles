@@ -31,6 +31,7 @@
         git commit -F $TMPFILE; \
         rm -f $TMPFILE"
 	cauto = acommit
+	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
 [commit]
 	verbose = true
 
