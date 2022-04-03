@@ -147,7 +147,6 @@ assign [class="(?i)firefox"] 2
 assign [class="(?i)jetbrains"] 3
 assign [class="(?i)anki"] 3
 assign [class="(?i)nemo"] 3
-assign [class="(?i)thunderbird"] 3
 
 assign [class="(?i)gimp"] 4
 assign [class="(?i)zenity"] 4
@@ -163,6 +162,7 @@ assign [class="(?i)zero-k launcher"] 4
 
 assign [class="(?i)discord"] 5
 assign [class="(?i)ferdi"] 5
+assign [class="(?i)thunderbird"] 5
 assign [class="(?i)clickup"] 5
 assign [class="(?i)slack"] 5
 assign [class="(?i)microsoft teams - preview"] 5
