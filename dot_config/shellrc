@@ -82,6 +82,9 @@ alias s="systemctl"
 alias j="journalctl"
 alias walr="cat /home/meowxiik/.cache/wal/sequences"
 
+alias crow_start="crow_start --extra-mount /opt/pycharm-professional"
+alias ros2="[ -d install ] && . ./install/setup.bash; [ -d config ] && CROW_CONFIG_DIR=\$(realpath ./config) ros2"
+
 alias ldo="lazydocker"
 alias lzd="lazydocker"
 
