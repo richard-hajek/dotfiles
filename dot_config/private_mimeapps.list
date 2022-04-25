@@ -29,5 +29,5 @@ application/xml=gvim.desktop;
 application/rdf+xml=gvim.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-6JMOI1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-6JMOI1.desktop;
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop;firefox.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop;thunderbird.desktop;firefox.desktop;
 application/x-xpinstall=thunderbird.desktop;
