@@ -46,7 +46,15 @@ if which bw >/dev/null && [[ $USER != "root" ]]; then
 fi
 
 function cd () {
-    builtin cd "$@" && ls --color=auto --group-directories-first
+	
+	if [[ -d "$1" ]] && [[ -d "$1/.git" ]]; then
+		(
+			cd "$1"
+			dura watch  &
+		)
+	fi
+
+  builtin cd "$@" && ls --color=auto --group-directories-first
 }
 
 function ex ()
