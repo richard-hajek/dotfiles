@@ -50,7 +50,7 @@ function cd () {
 	if [[ -d "$1" ]] && [[ -d "$1/.git" ]]; then
 		(
 			builtin cd "$1"
-			dura watch &
+			dura watch > /dev/null &
 		)
 	fi
 
