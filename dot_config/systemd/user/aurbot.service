@@ -1,0 +1,13 @@
+[Unit]
+Description=AUR Builder Bot
+
+[Service]
+Environment="TMP=/var/lib/aurbot-build"
+ExecStart=/home/meowxiik/Cloud/Software/aurbot/aurbot -c /home/meowxiik/Cloud/Software/aurbot/aurbot.conf
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+CPUSchedulingPolicy=batch
+
+[Install]
+WantedBy=default.target

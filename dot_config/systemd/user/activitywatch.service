@@ -1,0 +1,11 @@
+[Unit]
+Description=
+
+[Service]
+ExecStart=/usr/bin/aw-qt
+Restart=always
+RestartSec=3
+Environment="LANG=en_US.UTF-8"
+
+[Install]
+WantedBy=default.target
