@@ -1,0 +1,9 @@
+# Reload functions
+#super + Escape
+#	"$XDG_CONFIG_HOME"/sxhkd/functions
+
+button9
+	"$HOME"/Cloud/Scripts/pipelines/screenshot-edit
+
+button8
+	xdotool getactivewindow key ctrl+v
