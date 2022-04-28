@@ -174,11 +174,6 @@ include = []
 exclude = []
 max_depth = 255
 
-[repos."/home/meowxiik/.config/dura/git-hooks"]
-include = []
-exclude = []
-max_depth = 255
-
 [repos."/home/meowxiik/.config/nvim"]
 include = []
 exclude = []
@@ -1735,6 +1730,11 @@ exclude = []
 max_depth = 255
 
 [repos."/home/meowxiik/Downloads/pharmacyapp"]
+include = []
+exclude = []
+max_depth = 255
+
+[repos."/home/meowxiik/duratest"]
 include = []
 exclude = []
 max_depth = 255
