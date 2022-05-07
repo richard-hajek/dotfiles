@@ -1,5 +1,10 @@
 echo "Sourcing ~/.zshrc"
 
+while ! systemctl is-active sddm.service; do
+	echo "Waiting for SDDM"
+	exit 0
+done
+
 # Pacman Refresh
 TRAPUSR1() { rehash }
 
