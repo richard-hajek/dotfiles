@@ -49,6 +49,7 @@ bindsym $mod+Ctrl+R exec wal --theme random
 bindsym Shift+Print exec screenshot-edit
 bindsym Print exec screenshot-take
 bindsym $mod+P exec toggle-polybar-hide
+bindsym $mod+e exec rofi -show emoji -modi emoji
 #bindsym $mod+e exec iemoji
 
 # bindsym Shift+Print exec notify-send wlp
@@ -80,6 +81,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout tabbed
 bindsym $mod+t layout default
 # bindsym $mod+e layout toggle split
+#bindsym $mod+e 
 
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
