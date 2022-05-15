@@ -122,3 +122,5 @@ unset __conda_setup
 fi
 
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
