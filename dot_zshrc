@@ -1,5 +1,8 @@
 echo "Sourcing ~/.zshrc"
 
+autoload -Uz compinit
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
+
 if systemctl is-active waiting.service > /dev/null; then
 	while ! systemctl is-active sddm.service > /dev/null ; do
 		echo "Waiting for SDDM"
@@ -123,4 +126,3 @@ fi
 
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
-compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
