@@ -1,0 +1,32 @@
+if which bw >/dev/null && [[ $USER != "root" ]]; then
+
+	session_file=/tmp/MEOWXIIK_BW_SESSION
+
+	if [[ -f $session_file ]]; then
+		source $session_file
+
+		if [[ -z "$BW_SESSION" ]] ; then
+			rm $session_file
+		fi
+	fi
+
+	if [[ ! -f $session_file ]] && [[ $- == *i* ]]; then
+
+		if [[ ! -f ~/.cache/dotfiles_pass ]]; then
+			echo -n "Please enter dotfiles password: "
+			read -s password
+			echo
+			# Run Command
+			echo $password > ~/.cache/dotfiles_pass
+		fi
+
+		#bw login meowxiik+dotfiles@gmail.com
+		SESSION=$(bw unlock < ~/.cache/dotfiles_pass | grep "export BW_SESSION" | sed 's/^$ export BW_SESSION=//g' | tr -d \" )
+		echo "export BW_SESSION=\"$SESSION\"" > $session_file
+
+		chmod 600 $session_file
+	fi
+
+	[[ -f "$session_file" ]] && . "$session_file"
+
+fi

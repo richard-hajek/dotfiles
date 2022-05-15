@@ -1,0 +1,11 @@
+function cd () {
+	
+	if [[ -d "$1" ]] && [[ -d "$1/.git" ]]; then
+		(
+			builtin cd "$1"
+			dura watch > /dev/null &
+		)
+	fi
+
+	builtin cd "$@" && ls --color=auto --group-directories-first
+}

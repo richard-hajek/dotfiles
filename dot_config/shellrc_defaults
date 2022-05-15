@@ -1,0 +1,9 @@
+export TERMINAL=terminator
+export BROWSER=firefox
+export EDITOR=nvim
+export VISUAL=nvim
+export GRAPHICSEDITOR=gimp
+export SCREENSHOTEDITOR=gimp
+export READER=mupdf
+export EXPLORER=nemo
+export GIT_PAGER="cat"
