@@ -1,7 +1,7 @@
 echo "Sourcing ~/.zshrc"
 
-if systemctl is-active waiting.service; then
-	while ! systemctl is-active sddm.service; do
+if systemctl is-active waiting.service > /dev/null; then
+	while ! systemctl is-active sddm.service > /dev/null ; do
 		echo "Waiting for SDDM"
 		exit 0
 	done
