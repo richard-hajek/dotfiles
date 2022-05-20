@@ -1,6 +1,6 @@
 function cd () {
 	
-	if [[ -d "$1" ]] && [[ -d "$1/.git" ]]; then
+	if hash dura 2> /dev/null && [[ -d "$1" ]] && [[ -d "$1/.git" ]]; then
 		(
 			builtin cd "$1"
 			dura watch > /dev/null &
