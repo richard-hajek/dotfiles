@@ -30,8 +30,8 @@ if [[ ! -z ${ZSH+x} ]]; then
 	CASE_SENSITIVE="true"
 
 	plugins=(
-		archlinux
-		lxd-completion-zsh
+	  # 	archlinux
+		# lxd-completion-zsh
 		# archlinux
 		# asdf
 		# bundler
