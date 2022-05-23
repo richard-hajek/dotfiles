@@ -161,6 +161,7 @@ assign [class="(?i)zero-k"]4
 assign [title="(?i)zero-k"]4
 assign [class="(?i)spring"]4
 assign [class="(?i)zero-k launcher"] 4
+assign [class="(?i)code-oss"] 4
 
 assign [class="(?i)discord"] 5
 assign [class="(?i)ferdi"] 5
