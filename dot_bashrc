@@ -6,8 +6,6 @@
 [[ $- != *i* ]] && return
 
 echo "Sourcing ~/.bashrc"
-. ~/.config/shellrc
-
 
 HISTFILE=~/.cache/bash/history
 # don't put duplicate lines or lines starting with space in the history.
@@ -49,3 +47,4 @@ if [[ $USER != "meowxiik" ]] || [[ $(cat /etc/layer) != *runtime* ]]; then
 	safe_append_prompt_command non_local_prompt
 fi
 
+. ~/.config/shellrc
