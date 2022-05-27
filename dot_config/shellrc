@@ -17,7 +17,6 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 export XDG_CACHE_HOME="${HOME}/.cache"
 
 source ~/.config/shellrc_dotbloat
-source ~/.config/shellrc_bitwarden
 source ~/.config/shellrc_bettercd
 source ~/.config/shellrc_aliases
 source ~/.config/shellrc_defaults
