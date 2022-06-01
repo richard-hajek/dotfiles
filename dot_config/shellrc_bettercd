@@ -7,5 +7,5 @@ function cd () {
 		)
 	fi
 
-	builtin cd "$@" && ls --color=auto --group-directories-first
+	builtin cd "$@" && ls --color=auto --group-directories-first -X
 }

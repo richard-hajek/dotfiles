@@ -14,7 +14,7 @@ alias ll="ls -l"
 alias lla="ls -la"
 alias llah="ls -lah"
 alias llh="ls -lh"
-alias ls='ls --color=auto --group-directories-first'
+alias ls='ls --color=auto --group-directories-first -X'
 alias lzd="lazydocker"
 alias overseer="ssh dns overseer"
 alias p="ipython"
