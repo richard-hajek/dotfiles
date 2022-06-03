@@ -18,7 +18,7 @@ alias ls='ls --color=auto --group-directories-first -X'
 alias lzd="lazydocker"
 alias overseer="ssh dns overseer"
 alias p="ipython"
-alias ros2="[ -d install ] && . ./install/setup.bash; [ -d config ] && CROW_CONFIG_DIR=\$(realpath ./config) ros2"
+alias ros2="[ -d install ] && . ./install/setup.bash; [ -d config ] && export CROW_CONFIG_DIR=\$(realpath ./config); ros2"
 alias s="systemctl"
 alias sdr="systemctl daemon-reload"
 alias sudo='sudo '
