@@ -3,8 +3,11 @@ echo "Sourcing ~/.zshrc"
 autoload -Uz compinit
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
-if systemctl is-active waiting.service > /dev/null; then
-	while ! systemctl is-active sddm.service > /dev/null ; do
+waiting=$(systemctl is-active waiting.service > /dev/null ; echo $?)
+sddm=$(systemctl is-active sddm.service > /dev/null ; echo $?)
+
+if [[ $waiting == 0 || $waiting == 3 ]]; then
+	while [[ $sddm != 0 ]] ; do
 		echo "Waiting for SDDM"
 		exit 0
 	done
@@ -30,7 +33,7 @@ if [[ ! -z ${ZSH+x} ]]; then
 	CASE_SENSITIVE="true"
 
 	plugins=(
-	  # 	archlinux
+	  #	archlinux
 		# lxd-completion-zsh
 		# archlinux
 		# asdf
