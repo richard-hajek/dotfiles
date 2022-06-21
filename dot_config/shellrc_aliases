@@ -1,7 +1,5 @@
 alias clip="xclip -i -sel clipboard"
 alias cls="clear;ls"
-alias crow_pycharm="echo $'cd ~/Cloud/PCIIRC/crow3/; . ./install/setup.bash; CROW_CONFIG_DIR=\$(realpath ./config) /opt/pycharm-professional/bin/pycharm.sh' | crow_enter"
-alias crow_start="crow_start --extra-mount /opt/pycharm-professional"
 alias dei="docker exec -it"
 alias dosbox="dosbox -conf $XDG_CONFIG_HOME/dosbox/dosbox.conf"
 alias dotfiles="chezmoi"
