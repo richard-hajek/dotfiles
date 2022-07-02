@@ -19,6 +19,7 @@ bindsym $mod+minus scratchpad show
 # Appearance
 font pango:monospace 8
 default_border none
+#default_floating_border normal
 floating_modifier $mod
 
 #Pseudo fullscreen
@@ -139,7 +140,6 @@ mode "resize" {
 exec ~/.config/polybar/launch_polybar.sh
 exec ~/.xprofile
 
-
 # for_window [class="^.*"] border pixel 0
 
 assign [class="(?i)obsidian"] 10
@@ -173,3 +173,6 @@ assign [class="(?i)microsoft teams - preview"] 5
 for_window [class="Technic Launcher"] floating enable
 for_window [title="win0"] floating enable
 for_window [class="feh" title="qr_code"] floating enable
+
+for_window [class="(?i)nemo"] border pixel 3
+for_window [class="(?i)nemo"] floating enable
