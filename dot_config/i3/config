@@ -176,3 +176,6 @@ for_window [class="feh" title="qr_code"] floating enable
 
 for_window [class="(?i)nemo"] border pixel 3
 for_window [class="(?i)nemo"] floating enable
+
+# This line is for manim
+for_window [class="(?)moderngl"] floating enable
