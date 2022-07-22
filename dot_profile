@@ -4,6 +4,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 echo "Sourcing ~/.profile"
-source "/home/meowxiik/.config/shellrc"
+source "/home/$USER/.config/shellrc"
 
-eval "$(pyenv init --path)"
+if hash pyenv &> /dev/null; then 
+  eval "$(pyenv init --path)"
+fi
