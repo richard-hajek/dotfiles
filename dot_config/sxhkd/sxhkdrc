@@ -3,7 +3,7 @@
 #	"$XDG_CONFIG_HOME"/sxhkd/functions
 
 button9
-	"$HOME"/Cloud/Scripts/pipelines/screenshot-edit
+	"$HOME"/Cloud/Scripts/pipelines/screenshot-cut
 
-button8
-	xdotool getactivewindow key ctrl+v
+#button8
+#	xdotool getactivewindow key ctrl+v

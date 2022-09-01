@@ -47,7 +47,7 @@ bindsym $mod+w sticky toggle
 bindsym $mod+l exec i3lock
 
 bindsym $mod+Ctrl+R exec wal --theme random
-bindsym Shift+Print exec screenshot-edit
+bindsym Shift+Print exec screenshot-cut
 bindsym Print exec screenshot-take
 bindsym $mod+P exec toggle-polybar-hide
 bindsym $mod+e exec rofi -show emoji -modi emoji
