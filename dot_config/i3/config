@@ -44,7 +44,7 @@ bindsym $mod+d exec rofi -show run
 
 bindsym $mod+w sticky toggle
 
-bindsym $mod+l exec i3lock
+bindsym $mod+l exec lock.sh
 
 bindsym $mod+Ctrl+R exec wal --theme random
 bindsym Shift+Print exec screenshot-cut
