@@ -9,9 +9,9 @@ setxkbmap cz -variant coder
 picom &
 xinput set-prop 'Asus TouchPad' 'libinput Tapping Enabled' 1
 
-if hash xautolock &> /dev/null; then
-  xautolock -locker 'sudo shutdown now' -notifier 'notify-send -a "System" "Inactivity" "Will shut down in 10 min due to inactivity"' -notify 600 -noclose -time 15 &
-fi
+#if hash xautolock &> /dev/null; then
+#  xautolock -locker 'sudo shutdown now' -notifier 'notify-send -a "System" "Inactivity" "Will shut down in 10 min due to inactivity"' -notify 600 -noclose -time 15 &
+#fi
 
 if hash obsidian &> /dev/null; then
   obsidian &
