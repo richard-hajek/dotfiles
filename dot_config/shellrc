@@ -21,3 +21,5 @@ source ~/.config/shellrc_bettercd
 source ~/.config/shellrc_aliases
 source ~/.config/shellrc_defaults
 source ~/.config/shellrc_path
+source ~/.config/shellrc_pretty
+source ~/.config/shellrc_apps

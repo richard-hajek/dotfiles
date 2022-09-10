@@ -1,131 +1,14 @@
 echo "Sourcing ~/.zshrc"
 
+. ~/.config/shellrc
+
 autoload -Uz compinit
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
-
-waiting=$(systemctl is-active waiting.service > /dev/null ; echo $?)
-sddm=$(systemctl is-active sddm.service > /dev/null ; echo $?)
-
-if [[ $waiting == 0 || $waiting == 3 ]]; then
-	while [[ $sddm != 0 ]] ; do
-		echo "Waiting for SDDM"
-		exit 0
-	done
-fi
-
-# Pacman Refresh
-TRAPUSR1() { rehash }
 
 setopt extendedglob
 setopt COMPLETE_ALIASES
 setopt no_share_history
 unsetopt share_history
 
-unset ZSH
-if [[ -f /usr/share/oh-my-zsh/oh-my-zsh.sh ]]; then
-	export ZSH='/usr/share/oh-my-zsh'
-elif [[ -f ~/.oh-my-zsh/oh-my-zsh.sh ]]; then
-	export ZSH=~/.oh-my-zsh
-fi
-
-if [[ ! -z ${ZSH+x} ]]; then
-	ZSH_THEME=robbyrussell
-	CASE_SENSITIVE="true"
-
-	plugins=(
-	  #	archlinux
-		# lxd-completion-zsh
-		# archlinux
-		# asdf
-		# bundler
-		# docker
-		# jsontools
-		# vscode
-		# web-search
-		# tig
-		# kubectl
-	  #	gitfast
-		# colored-man-pages
-		# colorize
-		# command-not-found
-		# cp
-		# dirhistory
-		# autojump
-		# sudo
-		# rails
-		# git
-		# git-prompt
-		# ruby
-		)
-
-	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-	typeset -gA ZSH_HIGHLIGHT_STYLES
-
-	source $ZSH/oh-my-zsh.sh
-fi
-
-
-if hash wal &> /dev/null && hash pyenv &> /dev/null; then
-	wal -e --theme sexy-gjm --vte > /dev/null
-fi
-
-. ~/.config/shellrc
-
-if hash chezmoi &> /dev/null; then
-	( (
-	OUTPUT=$(chezmoi status 2>&1)
-
-	if [[ ! -z "${OUTPUT// }" ]]; then
-		notify-send "Chezmoi" "$OUTPUT"
-	fi
-
-	) & )
-fi
-
-
-if hash fuck &> /dev/null; then
-	eval $(thefuck --alias)
-fi
-
-if hash pyenv &> /dev/null; then
-	eval "$(pyenv init -)"
-fi
-
-if [ -f ~/.fzf.zsh ]; then
-	source ~/.fzf.zsh
-fi
-
-setopt no_share_history
-unsetopt share_history
-
-#alias ros2='[ -z $ROS_SOURCED ] && . /opt/ros/eloquent/setup.zsh; ROS_SOURCED=1; ros2 "$@"'
-#alias crow='. install/setup.zsh'
-#alias pipeline='/home/richard-hajek/Cloud/Projects/just-compose/src/just_compose/main.py /home/richard-hajek/Cloud/Projects/just-compose/examples/just-compose_ros.yaml'
-#alias python="python3"
-#alias pip="pip3"
-
-#autoload -U +X bashcompinit && bashcompinit
-#complete -o nospace -C /usr/bin/terraform terraform
-
-if [[ -f "/home/meowxiik/.local/share/anaconda3/bin/conda" ]]; then
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/meowxiik/.local/share/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/meowxiik/.local/share/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/meowxiik/.local/share/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/meowxiik/.local/share/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
-fi
 
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
-
