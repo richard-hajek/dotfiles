@@ -11,6 +11,10 @@ HISTFILE=~/.cache/bash/history
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
+if hash pyenv &> /dev/null; then
+  eval "$(pyenv init -)"
+fi
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -23,10 +27,6 @@ export SCM_CHECK=true
 source "$BASH_IT"/bash_it.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-if hash pyenv &> /dev/null; then
-  eval "$(pyenv init -)"
-fi
 
 non_local_prompt() {
 
