@@ -1,6 +1,7 @@
 echo "Sourcing ~/.zshrc"
 
-. ~/.config/shellrc
+source ~/.config/shellrc
+source ~/.config/zshrc_ohmyzsh
 
 autoload -Uz compinit
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
