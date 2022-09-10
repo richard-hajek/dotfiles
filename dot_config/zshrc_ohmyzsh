@@ -1,0 +1,20 @@
+echo "Sourcing ~/.config/zshrc_ohmyzsh"
+
+unset ZSH
+if [[ -f /usr/share/oh-my-zsh/oh-my-zsh.sh ]]; then
+	export ZSH='/usr/share/oh-my-zsh'
+elif [[ -f ~/.oh-my-zsh/oh-my-zsh.sh ]]; then
+	export ZSH=~/.oh-my-zsh
+fi
+
+if [[ ! -z ${ZSH+x} ]]; then
+	ZSH_THEME=robbyrussell
+	CASE_SENSITIVE="true"
+
+	plugins=()
+
+	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+	typeset -gA ZSH_HIGHLIGHT_STYLES
+
+	source $ZSH/oh-my-zsh.sh
+fi

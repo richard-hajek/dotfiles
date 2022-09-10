@@ -1,0 +1,18 @@
+if hash chezmoi &> /dev/null; then
+	( (
+	OUTPUT=$(chezmoi status 2>&1)
+
+	if [[ ! -z "${OUTPUT// }" ]]; then
+		notify-send "Chezmoi" "$OUTPUT"
+	fi
+
+	) & )
+fi
+
+if hash fuck &> /dev/null; then
+	eval $(thefuck --alias)
+fi
+
+if hash pyenv &> /dev/null; then
+	eval "$(pyenv init -)"
+fi
