@@ -1,5 +1,3 @@
-echo "Sourcing ~/.config/zshrc_ohmyzsh"
-
 unset ZSH
 if [[ -f /usr/share/oh-my-zsh/oh-my-zsh.sh ]]; then
 	export ZSH='/usr/share/oh-my-zsh'
