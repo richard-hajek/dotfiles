@@ -1,15 +1,14 @@
 echo "Sourcing ~/.zshrc"
 
+autoload -Uz compinit
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+
 source ~/.config/shellrc
 source ~/.config/zshrc_ohmyzsh
-
-autoload -Uz compinit
-compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
 setopt extendedglob
 setopt COMPLETE_ALIASES
 setopt no_share_history
 unsetopt share_history
-
 
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
