@@ -3,3 +3,4 @@ venv
 wandb
 __pycache__
 *.pyc
+_*.md
