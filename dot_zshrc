@@ -5,7 +5,7 @@ compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 source ~/.config/shellrc
 source ~/.config/zshrc_ohmyzsh
-source ~/.config/shellrc
+source ~/.config/shellrc_aliases
 
 setopt extendedglob
 setopt COMPLETE_ALIASES
