@@ -12,8 +12,6 @@ setopt COMPLETE_ALIASES
 setopt no_share_history
 unsetopt share_history
 
-[ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/meowxiik/.local/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
