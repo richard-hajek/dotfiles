@@ -18,3 +18,7 @@ sudo timedatectl set-ntp true &
 if hash obsidian &> /dev/null; then
   obsidian &
 fi
+
+if hash numlockx &> /dev/null; then
+  numlockx on
+fi
