@@ -40,5 +40,3 @@ export VAGRANT_HOME="$XDG_DATA_HOME"/vagrant
 export WEBIDE_PROPERTIES="$XDG_CONFIG_HOME/JetBrains/webide.properties"
 export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
-
-export HOSTALIASES=~/config/.hosts
