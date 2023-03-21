@@ -9,3 +9,10 @@ function cd () {
 
 	builtin cd "$@" && ls --color=auto --group-directories-first -X
 }
+
+
+function ssh() {
+  echo "$@" > ~/.cache/active_ssh
+  /usr/bin/ssh "$@"  
+  rm ~/.cache/active_ssh
+}
