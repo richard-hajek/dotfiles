@@ -1,11 +1,3 @@
 function cd () {
-	
-	if hash dura 2> /dev/null && [[ -d "$1" ]] && [[ -d "$1/.git" ]]; then
-		(
-			builtin cd "$1"
-			dura watch > /dev/null &
-		)
-	fi
-
 	builtin cd "$@" && ls --color=auto --group-directories-first -X
 }

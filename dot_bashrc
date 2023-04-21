@@ -7,18 +7,11 @@
 
 echo "Sourcing ~/.bashrc"
 
-HISTFILE=~/.cache/bash/history
 # don't put duplicate lines or lines starting with space in the history.
+HISTFILE=~/.cache/bash/history
 HISTCONTROL=ignoreboth
-
-if hash pyenv &> /dev/null; then
-  eval "$(pyenv init -)"
-fi
-
 # append to the history file, don't overwrite it
 shopt -s histappend
-
-[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 # bash_it config
 export BASH_IT="${HOME}/.bash_it"
@@ -28,23 +21,4 @@ source "$BASH_IT"/bash_it.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-non_local_prompt() {
-
-	prePS1=
-
-	if [[ $USER != "meowxiik" ]]; then
-		prePS1="\u "
-	fi
-
-	if [[ -f /etc/layer ]] && [[ $(cat /etc/layer) != *runtime* ]]; then
-		prePS1="${prePS1}\$(cat /etc/layer)"
-	fi
-
-	PS1="${prePS1} ${PS1}"
-}
-
-if [[ $USER != "meowxiik" ]] || [[ $(cat /etc/layer) != *runtime* ]]; then
-	safe_append_prompt_command non_local_prompt
-fi
-
-. ~/.config/shellrc
+source ~/.config/shellrc
