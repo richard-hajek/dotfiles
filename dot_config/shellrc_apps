@@ -18,7 +18,7 @@ if hash pyenv &> /dev/null; then
 fi
 
 if hash kubectl &> /dev/null; then
-	source <(kubectl completion `basename $0`)
+	source <(kubectl completion $(basename $(ps -p $$ -o comm=)))
 fi
 
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
