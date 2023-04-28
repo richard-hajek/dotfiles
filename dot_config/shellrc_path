@@ -3,3 +3,4 @@ append_path /home/$USER/.local/bin
 append_path /home/$USER/go/bin
 append_path /home/meowxiik/.local/share/gem/ruby/3.0.0/bin
 append_path /usr/local/bin
+append_path /home/meowxiik/.local/share/ngc-cli
