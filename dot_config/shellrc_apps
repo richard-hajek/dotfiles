@@ -9,16 +9,8 @@ if hash chezmoi &> /dev/null; then
 	) & )
 fi
 
-if hash fuck &> /dev/null; then
-	eval $(thefuck --alias)
-fi
-
 if hash pyenv &> /dev/null; then
 	eval "$(pyenv init -)"
-fi
-
-if hash kubectl &> /dev/null; then
-	source <(kubectl completion $(basename $(ps -p $$ -o comm=)))
 fi
 
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
