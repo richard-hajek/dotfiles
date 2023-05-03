@@ -8,7 +8,7 @@ setxkbmap cz -variant coder
 
 picom &
 xinput set-prop 'Asus TouchPad' 'libinput Tapping Enabled' 1
-nm-applet &
+# nm-applet &
 sudo timedatectl set-ntp true &
 
 #if hash xautolock &> /dev/null; then
