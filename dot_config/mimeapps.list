@@ -17,6 +17,9 @@ x-scheme-handler/mailto=userapp-Thunderbird-6JMOI1.desktop
 message/rfc822=userapp-Thunderbird-6JMOI1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-6JMOI1.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
+x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
+x-scheme-handler/magnet=freedownloadmanager_magnet_up.desktop
+application/x-bittorrent=freedownloadmanager_torrent.desktop
 
 [Added Associations]
 image/png=firefox.desktop;
