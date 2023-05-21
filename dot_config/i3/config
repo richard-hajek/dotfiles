@@ -137,8 +137,7 @@ mode "resize" {
 }
 
 #exec systemctl --user start polybar
-exec ~/.config/polybar/launch_polybar.sh
-exec ~/.xprofile
+exec ~/.config/i3/startup.sh
 
 # for_window [class="^.*"] border pixel 0
 
