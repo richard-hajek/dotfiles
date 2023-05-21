@@ -6,7 +6,7 @@ echo "Sourcing .xprofile"
 wallpaper-select
 setxkbmap cz -variant coder
 
-picom &
+# picom &
 xinput set-prop 'Asus TouchPad' 'libinput Tapping Enabled' 1
 # nm-applet &
 sudo timedatectl set-ntp true &
@@ -15,9 +15,9 @@ sudo timedatectl set-ntp true &
 #  xautolock -locker 'sudo shutdown now' -notifier 'notify-send -a "System" "Inactivity" "Will shut down in 10 min due to inactivity"' -notify 600 -noclose -time 15 &
 #fi
 
-if hash obsidian &> /dev/null; then
-  obsidian &
-fi
+#if hash obsidian &> /dev/null; then
+#  obsidian &
+#fi
 
 if hash numlockx &> /dev/null; then
   numlockx on

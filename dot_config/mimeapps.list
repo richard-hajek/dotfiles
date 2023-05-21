@@ -20,6 +20,7 @@ x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
 x-scheme-handler/magnet=freedownloadmanager_magnet_up.desktop
 application/x-bittorrent=freedownloadmanager_torrent.desktop
+x-scheme-handler/slack=slack.desktop
 
 [Added Associations]
 image/png=firefox.desktop;
