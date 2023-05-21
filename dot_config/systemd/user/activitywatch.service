@@ -2,7 +2,7 @@
 Description=
 
 [Service]
-ExecStart=/usr/bin/aw-qt
+ExecStart=bash -c "sleep 10 && /usr/bin/aw-qt"
 Restart=always
 RestartSec=3
 Environment="LANG=en_US.UTF-8"
