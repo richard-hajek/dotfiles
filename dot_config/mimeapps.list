@@ -22,6 +22,8 @@ x-scheme-handler/magnet=freedownloadmanager_magnet_up.desktop
 application/x-bittorrent=freedownloadmanager_torrent.desktop
 x-scheme-handler/slack=slack.desktop
 application/x-yaml=org.kde.kate.desktop
+x-scheme-handler/mo=motrix.desktop
+x-scheme-handler/motrix=motrix.desktop
 
 [Added Associations]
 image/png=firefox.desktop;
