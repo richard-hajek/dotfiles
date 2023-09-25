@@ -29,6 +29,8 @@ alias yay="PKGEXT=.pkg.tar yay"
 alias yayforce="yay --mflags \"--nocheck --skippgpcheck --skipchecksums\""
 alias git_slow="git config --add oh-my-zsh.hide-status 1"
 
+alias hard_clear="printf '\033[2J\033[3J\033[1;1H'"
+
 alias task="go-task"
 
 alias ascii="grep --color='auto' -P -n \"[\x80-\xFF]\""
