@@ -3,6 +3,8 @@
 ## Usage:
 
 ```bash
+# Install: curl git bash zsh
+# chsh -s /bin/zsh
 cd ~
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
