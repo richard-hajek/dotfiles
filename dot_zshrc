@@ -7,6 +7,12 @@ source ~/.config/shellrc
 source ~/.config/zshrc_ohmyzsh
 source ~/.config/shellrc_aliases
 
+if hash bat &> /dev/null; then
+	alias -g -- -h='-h 2>&1 | bat --language=help --style=plain --paging=never'
+	alias -g -- --help='--help 2>&1 | bat --language=help --style=plain --paging=never'
+fi
+
+
 setopt extendedglob
 setopt COMPLETE_ALIASES
 setopt no_share_history
