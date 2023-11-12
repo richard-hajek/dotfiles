@@ -1,4 +1,8 @@
 reporting: "on"
+
+logs:
+  timestamps: true
+
 gui:
   returnImmediately: true
 customCommands:
