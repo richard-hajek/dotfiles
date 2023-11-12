@@ -2,3 +2,11 @@
 
 echo "Sourcing ~/.profile"
 source "/home/$USER/.config/shellrc"
+
+if [[ $SHELL == "bash" ]]; then
+    source ~/.bashrc
+fi
+
+if [[ $SHELL == "zsh" ]]; then
+    source ~/.zshrc
+fi

@@ -1,3 +1,7 @@
+
+append_path ~/.local/apps
+
+
 if hash chezmoi &> /dev/null; then
 	( (
 	OUTPUT=$(chezmoi status 2>&1)

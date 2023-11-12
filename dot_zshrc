@@ -1,38 +1,53 @@
 echo "Sourcing ~/.zshrc"
 
-autoload -Uz compinit
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+if [[ -z $ZSHRC_SOURCED ]]; then
+  export ZSHRC_SOURCED=1
 
-source ~/.config/shellrc
-source ~/.config/zshrc_ohmyzsh
-source ~/.config/shellrc_aliases
+  autoload -Uz compinit
+  compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
-if hash bat &> /dev/null; then
-	alias -g -- -h='-h 2>&1 | bat --language=help --style=plain --paging=never'
-	alias -g -- --help='--help 2>&1 | bat --language=help --style=plain --paging=never'
-fi
+  source ~/.config/shellrc
+  source ~/.config/zshrc_ohmyzsh
+  source ~/.config/shellrc_aliases
 
+  if hash bat &> /dev/null; then
 
-setopt extendedglob
-setopt COMPLETE_ALIASES
-setopt no_share_history
-unsetopt share_history
+    function bathelp() {
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/meowxiik/.local/share/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
+      if [[ $# > 0 ]]; then
+        echo "Bad use of global --help alias detected! Please use \\--help instead, optionally adding | bathelp manually"
+        return
+      fi
+
+      bat --language=help --style=plain
+    }
+
+    alias -g -- -h='-h 2>&1 | bathelp'
+    alias -g -- --help='--help 2>&1 | bathelp'
+  fi
+
+  setopt extendedglob
+  setopt COMPLETE_ALIASES
+  setopt no_share_history
+  unsetopt share_history
+
+  # >>> conda initialize >>>
+  # !! Contents within this block are managed by 'conda init' !!
+  __conda_setup="$('/home/meowxiik/.local/share/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+  if [ $? -eq 0 ]; then
     eval "$__conda_setup"
-else
+  else
     if [ -f "/home/meowxiik/.local/share/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/meowxiik/.local/share/mambaforge/etc/profile.d/conda.sh"
+      . "/home/meowxiik/.local/share/mambaforge/etc/profile.d/conda.sh"
     else
-        export PATH="/home/meowxiik/.local/share/mambaforge/bin:$PATH"
+      export PATH="/home/meowxiik/.local/share/mambaforge/bin:$PATH"
     fi
-fi
-unset __conda_setup
+  fi
+  unset __conda_setup
 
-if [ -f "/home/meowxiik/.local/share/mambaforge/etc/profile.d/mamba.sh" ]; then
+  if [ -f "/home/meowxiik/.local/share/mambaforge/etc/profile.d/mamba.sh" ]; then
     . "/home/meowxiik/.local/share/mambaforge/etc/profile.d/mamba.sh"
-fi
+  fi
 # <<< conda initialize <<<
+
+fi
