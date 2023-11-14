@@ -24,6 +24,7 @@ x-scheme-handler/slack=slack.desktop
 application/x-yaml=org.kde.kate.desktop
 x-scheme-handler/mo=motrix.desktop
 x-scheme-handler/motrix=motrix.desktop
+image/webp=firefox.desktop
 
 [Added Associations]
 image/png=firefox.desktop;
@@ -39,3 +40,4 @@ x-scheme-handler/mid=userapp-Thunderbird-6JMOI1.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;onlyoffice-desktopeditors.desktop;thunderbird.desktop;firefox.desktop;
 application/x-xpinstall=thunderbird.desktop;
 application/x-yaml=org.kde.kate.desktop;
+image/webp=firefox.desktop;
