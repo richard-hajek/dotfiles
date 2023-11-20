@@ -1,5 +1,6 @@
 .idea
 venv
+.venv
 wandb
 __pycache__
 *.pyc
