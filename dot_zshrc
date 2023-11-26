@@ -1,6 +1,7 @@
 echo "Sourcing ~/.zshrc"
 
 if [[ -z $ZSHRC_SOURCED ]]; then
+
   export ZSHRC_SOURCED=1
 
   autoload -Uz compinit
