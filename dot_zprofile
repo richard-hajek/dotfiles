@@ -1,4 +1,4 @@
 
-if hash pyenv &> /dev/null; then
-	eval "$(pyenv init --path)"
+if [[ -f ~/.zshrc ]] ; then
+    source ~/.zshrc
 fi

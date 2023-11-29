@@ -5,26 +5,20 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [[ -z $BASHRC_SOURCED ]]; then
+echo "Sourcing ~/.bashrc"
 
-  export BASHRC_SOURCED=1
+# don't put duplicate lines or lines starting with space in the history.
+HISTFILE=~/.cache/bash/history
+HISTCONTROL=ignoreboth
+# append to the history file, don't overwrite it
+shopt -s histappend
 
-  echo "Sourcing ~/.bashrc"
+# bash_it config
+export BASH_IT="${HOME}/.bash_it"
+export BASH_IT_THEME='minimal'
+export SCM_CHECK=true
+source "$BASH_IT"/bash_it.sh
 
-  # don't put duplicate lines or lines starting with space in the history.
-  HISTFILE=~/.cache/bash/history
-  HISTCONTROL=ignoreboth
-  # append to the history file, don't overwrite it
-  shopt -s histappend
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-  # bash_it config
-  export BASH_IT="${HOME}/.bash_it"
-  export BASH_IT_THEME='minimal'
-  export SCM_CHECK=true
-  source "$BASH_IT"/bash_it.sh
-
-  [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-  source ~/.config/shellrc
-
-fi
+source ~/.config/shellrc
