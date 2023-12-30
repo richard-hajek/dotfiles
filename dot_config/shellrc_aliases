@@ -19,7 +19,7 @@ alias lzd="lazydocker"
 alias overseer="ssh dns overseer"
 alias p="ipython"
 alias ros2="[ -d install ] && . ./install/setup.bash; [ -d config ] && export CROW_CONFIG_DIR=\$(realpath ./config); ros2"
-alias s="systemctl"
+alias sctl="systemctl"
 alias sdr="systemctl daemon-reload"
 alias sudo='sudo '
 alias tf="terraform"
@@ -29,6 +29,7 @@ alias yay="PKGEXT=.pkg.tar yay"
 alias yayforce="yay --mflags \"--nocheck --skippgpcheck --skipchecksums\""
 alias git_slow="git config --add oh-my-zsh.hide-status 1"
 alias dc="docker compose"
+alias sctlu="systemctl --user"
 
 alias hard_clear="printf '\033[2J\033[3J\033[1;1H'"
 
