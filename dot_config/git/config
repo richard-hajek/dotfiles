@@ -1,19 +1,29 @@
+
 [user]
 	email = richard.m.hajek@gmail.com
     name = Richard Hajek
+
+[includeIf "gitdir:~/Cloud/Work/"]
+    path = peoly.inc
+
+[pull]
+	rebase = true
+
+[core]
+	excludesFile = ~/.config/git/ignore
+	editor = nvim
+	pager = delta
+
+[delta]
+    features = decorations
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[pull]
-	rebase = true
-[core]
-	excludesFile = ~/.config/git/ignore
-	editor = nvim
-	pager = cat
+
 [alias]
-	lg = log --oneline
 	cat = cat-file -p
 	acommit = !"TMPFILE=$(mktemp -t git-commit-status-messageXXX); \
         git status --porcelain \
@@ -32,17 +42,12 @@
         rm -f $TMPFILE"
 	cauto = acommit
 	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
+
 [commit]
 	verbose = true
 
-[core]
-    pager = delta
-
 [interactive]
     diffFilter = delta --color-only --features=interactive
-
-[delta]
-    features = decorations
 
 [delta "interactive"]
     keep-plus-minus-markers = false
@@ -55,3 +60,4 @@
     hunk-header-file-style = red
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
+
