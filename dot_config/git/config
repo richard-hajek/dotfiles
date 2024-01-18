@@ -6,6 +6,9 @@
 [includeIf "gitdir:~/Cloud/Work/"]
     path = peoly.inc
 
+[includeIf "gitdir:~/Cloud/College/"]
+    path = cvut.inc
+
 [pull]
 	rebase = true
 
