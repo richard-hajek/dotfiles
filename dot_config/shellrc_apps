@@ -23,3 +23,7 @@ fi
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
 	source /usr/share/nvm/init-nvm.sh
 fi
+
+if hash z &> /dev/null; then
+    source `which z`
+fi
