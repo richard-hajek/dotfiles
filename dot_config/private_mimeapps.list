@@ -15,6 +15,7 @@ text/x-cmake=gvim.desktop;
 text/x-readme=org.kde.kwrite.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-6JMOI1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-6JMOI1.desktop;
+text/csv=libreoffice-calc.desktop;
 
 [Default Applications]
 application/rdf+xml=gvim.desktop
@@ -45,3 +46,4 @@ x-scheme-handler/motrix=motrix.desktop
 x-scheme-handler/msteams=teams.desktop
 x-scheme-handler/slack=slack.desktop
 x-scheme-handler/unknown=firefox.desktop
+text/csv=libreoffice-calc.desktop
