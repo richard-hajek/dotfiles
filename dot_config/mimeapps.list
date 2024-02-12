@@ -17,6 +17,7 @@ x-scheme-handler/mailto=userapp-Thunderbird-6JMOI1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-6JMOI1.desktop;
 text/csv=libreoffice-calc.desktop;
 application/xhtml+xml=firefox.desktop;
+x-scheme-handler/slack=slack.desktop;
 
 [Default Applications]
 application/rdf+xml=gvim.desktop
