@@ -1,9 +1,0 @@
-[Unit]
-Description=Automatic YAABS user synchronization
-
-[Service]
-ExecStart=/home/meowxiik/.local/share/yaabs/yaabs/yaabs.py users sync /home/meowxiik/.local/share/yaabs/configs/base.json
-Type=oneshot
-
-[Install]
-WantedBy=default.target

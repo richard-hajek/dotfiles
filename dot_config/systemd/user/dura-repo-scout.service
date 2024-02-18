@@ -1,9 +1,0 @@
-[Unit]
-Description=
-
-[Service]
-Type=oneshot
-ExecStart=bash -c 'find ~ -type d -name .git -prune | xargs -I= sh -c "cd =/..; dura watch"'
-
-[Install]
-WantedBy=default.target
