@@ -18,6 +18,7 @@ x-scheme-handler/mid=userapp-Thunderbird-6JMOI1.desktop;
 text/csv=libreoffice-calc.desktop;
 application/xhtml+xml=firefox.desktop;
 x-scheme-handler/slack=slack.desktop;
+application/x-shellscript=org.kde.kate.desktop;
 
 [Default Applications]
 application/rdf+xml=gvim.desktop
@@ -50,3 +51,4 @@ x-scheme-handler/slack=slack.desktop
 x-scheme-handler/unknown=firefox.desktop
 text/csv=libreoffice-calc.desktop
 application/xhtml+xml=firefox.desktop
+application/x-shellscript=org.kde.kate.desktop
