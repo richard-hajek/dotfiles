@@ -27,3 +27,7 @@ fi
 if [ -f /usr/share/z/z.sh  ]; then
     source /usr/share/z/z.sh
 fi
+
+if [ -d ~/.rye  ]; then
+    source ~/.rye/env
+fi
