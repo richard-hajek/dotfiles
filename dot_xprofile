@@ -6,3 +6,7 @@ echo "Sourcing .xprofile"
 
 xinput set-prop 'Asus TouchPad' 'libinput Tapping Enabled' 1
 sudo timedatectl set-ntp true &
+
+if hash keyscript.sh &> /dev/null; then
+    ( sleep 10; keyscript.sh ) &
+fi
