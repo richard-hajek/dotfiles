@@ -7,6 +7,8 @@ source ~/.config/shellrc
 source ~/.config/zshrc_ohmyzsh
 source ~/.config/shellrc_aliases # fucking ohmyzsh overwrites aliases
 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' '+m:[-_]=[-_]'
+
 if hash bat &> /dev/null; then
 
   function bathelp() {
