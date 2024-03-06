@@ -19,6 +19,7 @@ text/csv=libreoffice-calc.desktop;
 application/xhtml+xml=firefox.desktop;
 x-scheme-handler/slack=slack.desktop;
 application/x-shellscript=org.kde.kate.desktop;
+text/x-c++src=org.kde.kate.desktop;
 
 [Default Applications]
 application/rdf+xml=gvim.desktop
