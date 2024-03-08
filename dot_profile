@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Sourcing ~/.profile"
-source "/home/$USER/.config/shellrc"
+source "$HOME/.config/shellrc"
 
 if [[ $SHELL == "bash" ]]; then
     source ~/.bashrc
