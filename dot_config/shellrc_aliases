@@ -1,3 +1,5 @@
+alias rm="rm --one-file-system"
+
 alias todo="todo.sh"
 alias clip="xclip -i -sel clipboard"
 alias cls="clear;ls"
