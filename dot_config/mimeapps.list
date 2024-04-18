@@ -20,6 +20,7 @@ application/xhtml+xml=firefox.desktop;
 x-scheme-handler/slack=slack.desktop;
 application/x-shellscript=org.kde.kate.desktop;
 text/x-c++src=org.kde.kate.desktop;
+x-scheme-handler/insomnia=insomnia.desktop;Insomnia.desktop;
 
 [Default Applications]
 application/rdf+xml=gvim.desktop
@@ -53,3 +54,4 @@ x-scheme-handler/unknown=firefox.desktop
 text/csv=libreoffice-calc.desktop
 application/xhtml+xml=firefox.desktop
 application/x-shellscript=org.kde.kate.desktop
+x-scheme-handler/insomnia=insomnia.desktop
