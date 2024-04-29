@@ -33,6 +33,8 @@ alias git_slow="git config --add oh-my-zsh.hide-status 1"
 alias dc="docker compose"
 alias sctlu="systemctl --user"
 
+alias fsstrace="strace -e trace=open,openat,close,read,write,connect,accept"
+
 alias hard_clear="printf '\033[2J\033[3J\033[1;1H'"
 
 alias task="go-task"
