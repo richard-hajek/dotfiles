@@ -1,45 +1,33 @@
-alias rm="rm --one-file-system"
-
-alias todo="todo.sh"
+alias ascii="grep --color='auto' -P -n \"[\x80-\xFF]\""
 alias clip="xclip -i -sel clipboard"
-alias cls="clear;ls"
+alias dc="docker compose"
 alias dei="docker exec -it"
 alias dosbox="dosbox -conf $XDG_CONFIG_HOME/dosbox/dosbox.conf"
-alias dotfiles="chezmoi"
+alias fsstrace="strace -e trace=open,openat,close,read,write,connect,accept"
+alias git_slow="git config --add oh-my-zsh.hide-status 1"
 alias grep="grep --color=auto"
-alias j="journalctl"
+alias hard_clear="printf '\033[2J\033[3J\033[1;1H'"
 alias l="ls -l"
 alias la="ls -a"
-alias ldo="lazydocker"
-alias lzd="lazydocker"
 alias ll="ls -l"
 alias lla="ls -la"
 alias llah="ls -lah"
 alias llh="ls -lh"
 alias ls='ls --color=auto --group-directories-first -X'
 alias lzd="lazydocker"
-alias overseer="ssh dns overseer"
-alias p="ipython"
-alias ros2="[ -d install ] && . ./install/setup.bash; [ -d config ] && export CROW_CONFIG_DIR=\$(realpath ./config); ros2"
+alias pbash="env -i bash --norc --noprofile"
+alias rm="rm --one-file-system"
 alias sctl="systemctl"
+alias sctlu="systemctl --user"
 alias sdr="systemctl daemon-reload"
-alias sudo='sudo '
+alias sudo='sudo ' # https://stackoverflow.com/questions/37209913/how-does-alias-sudo-sudo-work
+alias task="go-task"
 alias tf="terraform"
+alias todo="todo.sh"
 alias walr="cat /home/meowxiik/.cache/wal/sequences"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias yay="PKGEXT=.pkg.tar yay"
 alias yayforce="yay --mflags \"--nocheck --skippgpcheck --skipchecksums\""
-alias git_slow="git config --add oh-my-zsh.hide-status 1"
-alias dc="docker compose"
-alias sctlu="systemctl --user"
-
-alias fsstrace="strace -e trace=open,openat,close,read,write,connect,accept"
-
-alias hard_clear="printf '\033[2J\033[3J\033[1;1H'"
-
-alias task="go-task"
-
-alias ascii="grep --color='auto' -P -n \"[\x80-\xFF]\""
 
 # SP  ' '  0x20 = · U+00B7 Middle Dot
 # TAB '\t' 0x09 = ￫ U+FFEB Halfwidth Rightwards Arrow
