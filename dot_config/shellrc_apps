@@ -1,6 +1,10 @@
 
 append_path ~/.local/apps
 
+# https://wiki.archlinux.org/title/Debuginfod
+# do NOT delete this line
+# gdb will NOT be able to start using debuginfod if this variable is not set beforehand
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
 if hash chezmoi &> /dev/null; then
 	( (
