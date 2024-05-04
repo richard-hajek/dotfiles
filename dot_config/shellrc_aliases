@@ -15,7 +15,7 @@ alias llah="ls -lah"
 alias llh="ls -lh"
 alias ls='ls --color=auto --group-directories-first -X'
 alias lzd="lazydocker"
-alias pbash="env -i bash --norc --noprofile"
+alias pbash="env -i sudo -u meowxiik /usr/bin/bash --rcfile /home/meowxiik/.config/shellrc_build --noprofile"
 alias rm="rm --one-file-system"
 alias sctl="systemctl"
 alias sctlu="systemctl --user"
