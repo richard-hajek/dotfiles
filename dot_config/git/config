@@ -1,7 +1,9 @@
-
 [user]
 	email = richard.m.hajek@gmail.com
     name = Richard Hajek
+
+[init]
+	defaultBranch = main
 
 [includeIf "gitdir:~/Cloud/Work/"]
     path = peoly.inc
@@ -17,14 +19,8 @@
 	editor = nvim
 	pager = delta
 
-[delta]
-    features = decorations
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+[commit]
+	verbose = true
 
 [alias]
 	cat = cat-file -p
@@ -45,9 +41,10 @@
         rm -f $TMPFILE"
 	cauto = acommit
 	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
+    lg = log --oneline
 
-[commit]
-	verbose = true
+[delta]
+    features = decorations
 
 [interactive]
     diffFilter = delta --color-only --features=interactive
@@ -64,5 +61,3 @@
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
 
-[init]
-	defaultBranch = main
