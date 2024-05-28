@@ -1,4 +1,5 @@
 alias ascii="grep --color='auto' -P -n \"[\x80-\xFF]\""
+alias batman="bat --language man"
 alias clip="xclip -i -sel clipboard"
 alias dc="docker compose"
 alias dei="docker exec -it"
