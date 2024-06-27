@@ -20,10 +20,6 @@ fi
 export LS_COLORS="di=34:ln=36:so=35:pi=35:ex=32:bd=35:cd=35:su=32:sg=32:tw=34:ow=34"
 export BAT_STYLE="plain"
 
-if hash pyenv &> /dev/null; then
-	eval "$(pyenv init -)"
-fi
-
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
 	source /usr/share/nvm/init-nvm.sh
 fi
@@ -35,3 +31,8 @@ fi
 if [ -d ~/.rye  ]; then
     source ~/.rye/env
 fi
+
+if hash pyenv &> /dev/null; then
+	eval "$(pyenv init -)"
+fi
+
