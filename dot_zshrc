@@ -32,3 +32,5 @@ setopt COMPLETE_ALIASES
 setopt no_share_history
 unsetopt share_history
 zstyle ':completion:*' completer _expand_alias _complete _ignored
+
+if [ -e /home/meowxiik/.nix-profile/etc/profile.d/nix.sh ]; then . /home/meowxiik/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
