@@ -28,10 +28,10 @@ if [ -f /usr/share/z/z.sh  ]; then
     source /usr/share/z/z.sh
 fi
 
-#if [ -d ~/.rye  ]; then
-#    export PATH="$PATH:$HOME/.rye/shims"
-#    source ~/.rye/env
-#fi
+if [ -d ~/.rye  ]; then
+    export PATH="$PATH:$HOME/.rye/shims"
+    source ~/.rye/env
+fi
 
 #if hash pyenv &> /dev/null; then
 #	eval "$(pyenv init -)"
