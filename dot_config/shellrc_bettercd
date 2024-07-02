@@ -1,3 +1,3 @@
-function cdl () {
+function cl () {
 	builtin cd "$@" && ls --color=auto --group-directories-first -X
 }
