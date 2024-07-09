@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/meowxiik/nix-user-chroot/.cargo'
+let g:netrw_dirhist_2='/home/meowxiik/nix_install/nix/config'
+let g:netrw_dirhist_1='/home/meowxiik/Cloud/Projects/seinfeld-faces/lib/tao_deploy'
