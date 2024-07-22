@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/meowxiik/ankiremote2/anki-desktop-docker/root/defaults'
+let g:netrw_dirhist_8='/home/meowxiik/ankiremote2/anki-desktop-docker/root'
+let g:netrw_dirhist_7='/home/meowxiik/ankiremote2/config'
 let g:netrw_dirhist_6='/home/meowxiik/Cloud/Projects/nuc/tests'
 let g:netrw_dirhist_5='/home/meowxiik/Cloud/Projects/nuc/docker/provisioners/debug'
 let g:netrw_dirhist_4='/home/meowxiik/Cloud/Projects/nuc/docker/provisioners'
