@@ -11,6 +11,9 @@
 [includeIf "gitdir:~/Cloud/College/"]
     path = cvut.inc
 
+[includeIf "gitdir:~/Cloud/Work/Robosales"]
+    path = robosales.inc
+
 [pull]
 	rebase = true
 
