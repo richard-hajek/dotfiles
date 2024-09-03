@@ -9,7 +9,10 @@ if [[ ! -z ${ZSH+x} ]]; then
 	ZSH_THEME=robbyrussell
 	CASE_SENSITIVE="true"
 
-	plugins=()
+	plugins=(
+        git
+        aws
+    )
 
 	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 	typeset -gA ZSH_HIGHLIGHT_STYLES

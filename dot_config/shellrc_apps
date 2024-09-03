@@ -36,3 +36,11 @@ fi
 if hash pyenv &> /dev/null; then
 	eval "$(pyenv init -)"
 fi
+
+if [[ $SHELL == "/bin/zsh" ]]; then
+    echo Shell is zsh
+    if hash aws &> /dev/null; then
+        echo Found aws
+        complete -C $(which aws_completer) aws
+    fi 
+fi
