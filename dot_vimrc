@@ -1,3 +1,13 @@
+" Plugins
+
+call plug#begin()
+
+" List your plugins here
+Plug 'tpope/vim-sensible'
+Plug 'https://github.com/hashivim/vim-terraform'
+
+call plug#end()
+
 "The 'scrolloff' (scroll offset) option determines the number of context lines you would like to see above and below the cursor
 set so=7
 

@@ -10,3 +10,4 @@ fi
 if [[ $SHELL == "zsh" ]]; then
     source ~/.zshrc
 fi
+. "$HOME/.rye/env"

@@ -33,7 +33,6 @@ if [ -d ~/.rye  ]; then
     source ~/.rye/env
 fi
 
-#if hash pyenv &> /dev/null; then
-#	eval "$(pyenv init -)"
-#fi
-
+if hash pyenv &> /dev/null; then
+	eval "$(pyenv init -)"
+fi
