@@ -25,6 +25,12 @@ append_path () {
     esac
 }
 
+if [[ -d ~/.config/shellrcd ]]; then
+    for f in ~/.config/shellrcd/*; do
+        source $f
+    done
+fi
+
 source ~/.config/shellrc_dotbloat
 source ~/.config/shellrc_bettercd
 source ~/.config/shellrc_aliases
