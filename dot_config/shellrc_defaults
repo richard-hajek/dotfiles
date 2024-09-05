@@ -6,4 +6,3 @@ export GRAPHICSEDITOR=gimp
 export SCREENSHOTEDITOR=gimp
 export READER=mupdf
 export EXPLORER=nemo
-export GIT_PAGER="cat"
