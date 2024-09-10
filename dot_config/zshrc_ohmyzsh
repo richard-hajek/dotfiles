@@ -12,6 +12,7 @@ if [[ ! -z ${ZSH+x} ]]; then
 	plugins=(
         git
         aws
+        z
     )
 
 	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
