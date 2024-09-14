@@ -6,7 +6,6 @@ elif [[ -f ~/.oh-my-zsh/oh-my-zsh.sh ]]; then
 fi
 
 if [[ ! -z ${ZSH+x} ]]; then
-    echo Loading oh my zsh
 	ZSH_THEME=robbyrussell
 	CASE_SENSITIVE="true"
     ZSHZ_CASE=ignore
