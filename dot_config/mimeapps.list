@@ -22,7 +22,7 @@ application/x-shellscript=org.kde.kate.desktop;
 text/x-c++src=org.kde.kate.desktop;
 x-scheme-handler/insomnia=insomnia.desktop;Insomnia.desktop;
 text/x-python3=org.kde.kate.desktop;
-x-scheme-handler/bitwarden=bitwarden.desktop;
+x-scheme-handler/bitwarden=bitwarden.desktop;Bitwarden.desktop;
 
 [Default Applications]
 application/rdf+xml=gvim.desktop
