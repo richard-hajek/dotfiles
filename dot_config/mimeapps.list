@@ -26,7 +26,7 @@ x-scheme-handler/bitwarden=bitwarden.desktop;Bitwarden.desktop;
 x-scheme-handler/mongodb=mongodb-compass.desktop;MongoDB Compass.desktop;
 x-scheme-handler/mongodb+srv=mongodb-compass.desktop;MongoDB Compass.desktop;
 video/mp4=vlc.desktop;
-hoppscotch=hoppscotch-handler.desktop
+hoppscotch=hoppscotch-handler.desktop;
 
 [Default Applications]
 application/rdf+xml=gvim.desktop
