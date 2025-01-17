@@ -42,3 +42,41 @@ if [[ $SHELL == "/bin/zsh" ]]; then
         complete -C $(which aws_completer) aws
     fi 
 fi
+
+
+ucat() {
+  for file in "$@"; do
+    if [[ ! -e "$file" ]]; then
+      echo "File '$file' does not exist." >&2
+      continue
+    fi
+
+    mime_type=$(file --mime-type -b "$file")
+
+    case "$mime_type" in
+      text/*|application/json|application/xml|application/javascript)
+        bat "$file"
+        ;;
+
+      application/vnd.sqlite3)
+        sqlite3 "$file" .dump
+        ;;
+
+      application/vnd.oasis.opendocument.spreadsheet)
+        dest=$(mktemp -d)
+        libreoffice --headless --convert-to csv --outdir "$dest" "$file" 1>&2 && \
+        cat "$dest/$(basename $file .ods).csv"
+        rm -rf $dest
+        ;;
+
+      application/x-tar|application/zip|application/x-gzip|application/x-bzip2|application/x-xz|application/vnd.rar)
+        echo "-- Archive contents: $file --"
+        atool -l "$file"
+        ;;
+
+      *)
+        echo "Unsupported file type for '$file' (MIME: $mime_type)." >&2
+        ;;
+    esac
+  done
+}
