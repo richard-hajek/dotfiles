@@ -5,6 +5,7 @@ echo "Sourcing ~/.zshrc"
 autoload -Uz compinit
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
+
 source ~/.config/shellrc
 source ~/.config/zshrc_ohmyzsh
 source ~/.config/shellrc_aliases # fucking ohmyzsh overwrites aliases
@@ -32,6 +33,7 @@ setopt COMPLETE_ALIASES
 setopt no_share_history
 unsetopt share_history
 zstyle ':completion:*' completer _expand_alias _complete _ignored
+zstyle ':completion:*' rehash true
 
 if [ -e /home/meowxiik/.nix-profile/etc/profile.d/nix.sh ]; then . /home/meowxiik/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
