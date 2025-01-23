@@ -7,16 +7,12 @@ gui:
   returnImmediately: true
 customCommands:
   containers:
-    - name: bash-no-user 
+    - name: bash2
       attach: true
       command: docker exec -it {{ .Container.ID }} sh
       serviceNames: []
-    - name: bash-default-user
+    - name: bash
       attach: true
       command: "docker exec -it {{ .Container.ID }} /bin/sh -c 'eval $(grep ^$(id -un): /etc/passwd | cut -d : -f 7-)'"
-      serviceNames: []
-    - name: bash-root
-      attach: true
-      command: "docker exec -u root -it {{ .Container.ID }} /bin/sh"
       serviceNames: []
 
