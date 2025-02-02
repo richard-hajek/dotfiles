@@ -2,6 +2,9 @@ echo "Sourcing ~/.zshrc"
 
 [[ $- != *i* ]] && return
 
+[[ $ZSHRC_SOURCED == 1 ]] && return
+ZSHRC_SOURCED=1
+
 autoload -Uz compinit
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
