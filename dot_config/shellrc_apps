@@ -42,3 +42,5 @@ if [[ $SHELL == "/bin/zsh" ]]; then
         complete -C $(which aws_completer) aws
     fi 
 fi
+
+export VCPKG_ROOT=$HOME/.local/share/vcpkg
