@@ -19,7 +19,7 @@
 
 [core]
 	excludesFile = ~/.config/git/ignore
-	editor = nvim
+	editor = vim
 	pager = delta
 
 [commit]
