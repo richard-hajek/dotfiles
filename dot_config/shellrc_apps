@@ -46,6 +46,6 @@ fi
 export VCPKG_ROOT=$HOME/.local/share/vcpkg
 
 
-if [[ $USER == "rhajek" ]];
+if [[ $USER == "rhajek" ]]; then
     uv run /home/rhajek/Cloud/Projects/timelogger/logger.py
 fi
