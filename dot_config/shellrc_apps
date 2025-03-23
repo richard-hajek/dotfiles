@@ -6,7 +6,7 @@
 # gdb will NOT be able to start using debuginfod if this variable is not set beforehand
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
-if hash chezmoi &> /dev/null; then
+if hash chezmoi &> /dev/null && hash notify-send &> /dev/null; then
 	( (
 	OUTPUT=$(chezmoi status 2>&1)
 
