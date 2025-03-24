@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd `mktemp -d`
+wget 'https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh'
+bash ./Miniconda3-latest-Linux-x86_64.sh
+
+dir=$(pwd)
+cd ..
+rm -rf $dir

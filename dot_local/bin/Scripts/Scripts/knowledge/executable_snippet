@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+cd ~/Cloud/Snippets
+SEL=$(echo * |  tr ' ' $'\n' | wofi --dmenu )
+
+if [[ $SEL == "" ]]; then
+    exit 0
+fi
+
+sleep 1
+
+xclip -selection clipboard < "$SEL"
+
+# Simulate a keypress to paste the clipboard content
+xdotool key --clearmodifiers ctrl+v
+

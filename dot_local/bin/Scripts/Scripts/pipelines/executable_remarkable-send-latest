@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd ~/Downloads
+newest="$(ls -t | head -n1)"
+echo Sending $newest to reMarkable
+rmapi put "$newest"

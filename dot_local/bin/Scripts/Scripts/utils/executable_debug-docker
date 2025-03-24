@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+LATEST=`docker image ls -a --format '{{ .CreatedAt }}' | sort | tail -n1`
+LATEST=`docker image ls -a --format '{{json .}}' | grep "$LATEST" | jq '.ID' -r`
+
+docker run -it $LATEST bash

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+SEC_STATUS=$(xrandr | awk 'BEGIN{FS=" ";}{if ($1 == "DP-1-1") print $2;}')
+
+echo Second monitor status: $SEC_STATUS
+if [ $SEC_STATUS == "connected" ]
+then
+	echo "Proceeding to setup second monitor..."
+	#xrandr --output 'DP-1-1' --left-of 'eDP-1-1'
+	xrandr --output 'DP-1-1' --size 1920x1080 --left-of 'eDP-1-1' --dpi 96 --auto
+	xrandr --output 'eDP-1-1' --pos 1920x0000
+	sleep 1
+	systemctl --user start polybar-secondary.service
+fi
+
+if [ $SEC_STATUS == "disconnected" ]
+then
+	echo "Proceeding to disable second monitor..."
+	systemctl --user stop polybar-secondary.service
+fi
+
+sleep 1
+
+/home/meowxiik/.scripts/random-theme

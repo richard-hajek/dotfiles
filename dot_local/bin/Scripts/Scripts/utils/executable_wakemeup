@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/Cloud/Projects/wake-me-up
+python3 wakemeup.py

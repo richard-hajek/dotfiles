@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+sudo systemctl start bluetooth
+
+bash << EOF | bluetoothctl
+echo power on
+echo scan on
+sleep 1
+echo power off
+sleep 1
+echo power on
+sleep 1
+echo scan on
+echo default-agent
+sleep 8
+echo trust 30:00:00:36:D5:BA
+echo pair 30:00:00:36:D5:BA
+echo connect 30:00:00:36:D5:BA
+EOF

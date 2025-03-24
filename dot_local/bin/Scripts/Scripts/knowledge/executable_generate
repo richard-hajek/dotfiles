@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+LIST='script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+ros2 pkg create --build-type ament_python <package name>
+self.get_logger().info()
+self.create_publisher(type, "topic", 1)
+self.create_subscriber(type, "topic", callback=lambda msg: self.receive(msg), 1)
+self.create_timer(0.2, self.timer_callback)
+self.create_service(HRITalk, "/hri/tts/talk", self.speak)
+self.create_client(AddTwoInts, "/add_two_ints")
+self.cli.wait_for_service(timeout_sec=1.0)
+import debugpy;debugpy.listen(("0.0.0.0", 5678));debugpy.wait_for_client();debugpy.breakpoint();
+netstat -tuplen
+'
+
+SEL=$(echo "$LIST" | rofi -dmenu )
+sleep 1
+xdotool type "$SEL"

@@ -1,0 +1,1 @@
+sudo -u meowxiik env -i /usr/bin/bash --rcfile /home/meowxiik/.config/shellrc_build --noprofile -i -c 'yay -Syu --noconfirm'

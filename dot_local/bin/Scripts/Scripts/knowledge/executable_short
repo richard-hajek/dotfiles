@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+ALTAIS="Altais Pass"
+PASTE="Paste X Sel"
+ALTAIS_EMAIL_PASS="Altais Email Pass"
+BITWARDEN="Bitwarden Dotfiles password"
+
+LIST="${ALTAIS}
+${PASTE}
+${ALTAIS_EMAIL_PASS}
+${BITWARDEN}"
+
+SEL=$(echo "$LIST" | rofi -dmenu )
+
+sleep 1
+
+if [[ $SEL == "$BITWARDEN" ]]; then
+	xdotool type "ENbv323nuK4ZsuE"
+	notify-send "Bitwarden input sent"
+fi
+
+if [[ $SEL == "$ALTAIS" ]]; then
+	cat ~/Cloud/PAltais/nomad/secrets/password | xargs xdotool type
+fi
+
+if [[ $SEL == "$PASTE" ]]; then
+	xclip -o | xargs -I '{}' xdotool type '{}'
+fi
+
+if [[ $SEL == "$ALTAIS_EMAIL_PASS" ]]; then
+	echo -n "jtF582jN+57" | xargs xdotool type
+fi

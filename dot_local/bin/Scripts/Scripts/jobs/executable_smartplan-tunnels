@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+systemctl --user start secure-tunnel@smartplan
+systemctl --user status secure-tunnel@smartplan 
+
+echo =================
+
+systemctl --user start secure-tunnel@smartplan-camera-ui
+systemctl --user status secure-tunnel@smartplan-camera-ui
+
+echo =================
+
+systemctl --user start secure-tunnel@smartplan-camera-stream
+systemctl --user status secure-tunnel@smartplan-camera-stream

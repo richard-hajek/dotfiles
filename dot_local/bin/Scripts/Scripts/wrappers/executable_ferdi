@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+systemd-run --user -t --slice=ferdi.slice /usr/bin/ferdi "$@"

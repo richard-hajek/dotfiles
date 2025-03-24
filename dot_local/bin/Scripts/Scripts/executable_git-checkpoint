@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Change branch to checkpoint w/o changing the index or working tree
+git symbolic-ref HEAD refs/heads/checkpoint >&2
+
+# Commit changes
+git add . >&2
+git acommit >&2
+
+# Print hash
+git rev-parse HEAD 2>&1
+
+# Change back to master
+git symbolic-ref HEAD refs/heads/master >&2
+
+exit 0

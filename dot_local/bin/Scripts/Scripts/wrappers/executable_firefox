@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ $# == 0 ]]; then
+	/usr/bin/firefox 'moz-extension://b3f16577-fe09-4482-97df-710292b17750/index.html'
+	exit 0
+fi
+
+/usr/bin/firefox "$@"

@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+
+# MOUNT REMOTES
+if ! nmcli c show --active | grep -q "MeownetV4"; then
+    nmcli connection up MeownetV4
+    sleep 10
+fi
+
+mkdir -p ~/Cloud/Models/x_TEXTURES
+sshfs ~/Cloud/Models/x_TEXTURES data.lan:/mnt/Cloud/CloudRemote/Models/x_TEXTURES
+
+TARGET_BLENDER=`ls ~/.config/blender | grep \\\. | sort -r | head -n1`
+target_dir=~/.config/blender/$TARGET_BLENDER/scripts/addons
+mkdir -p $target_dir
+
+# Install hardops
+cd $target_dir
+[ ! -d HOps ] && atool -x ~/Cloud/Models/x_TEXTURES/"HardOps 988_4b.zip"
+
+DISABLE_AUDIO_FILE="CmNsYXNzIEF1ZGlvX1BsYXllcjoKCiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgcGFzcwogICAgCgogICAgZGVmIGxvYWRfYXVkaW9fZmlsZXMoc2VsZiwgYXVkaW9fZmlsZXM9W10pOgogICAgICAgIHBhc3MKCiAgICBkZWYgcGxheV9hdWRpbyhzZWxmLCBhdWRpb19maWxlKToKICAgICAgICBwYXNzCgoKICAgIGRlZiBfX2xvYWRfYXVkaW8oc2VsZiwgYXVkaW9fZmlsZSk6CiAgICAgICAgcGFzcwo="
+echo $DISABLE_AUDIO_FILE | base64 -d > $target_dir/HOps/arcade/engine/audio/__init__.py
+
+# Install git addons
+# git clone https://github.com/carson-katri/dream-textures.git
+# git clone https://github.com/Poly-Haven/polyhavenassets.git
+# git clone https://github.com/blendfx/assetmanager.git
+git clone git@github.com:richard-hajek/collect-all-files.git
+
+echo "Please now"
+echo "- [ ] Bind extra mouse buttons"
+echo "- [ ] Enable Node Wrangler"
+echo "- [ ] Install Material Library"

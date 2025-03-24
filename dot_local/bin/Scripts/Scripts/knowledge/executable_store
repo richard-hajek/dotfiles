@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+MSG_KEY="Please enter key"
+MSG_VAL="Please enter value"
+
+KEY=$(echo "Please enter key" | rofi -dmenu)
+VALUE=$(echo "Please enter value" | rofi -dmenu)
+
+if [[ -z "$KEY" ]] || [[ "$KEY" == "$MSG_KEY" ]] || [[ -z "$VALUE" ]] || [[ "$VALUE" == "$MSG_VAL" ]]; then
+	/usr/bin/notify-send "Ignoring empty"
+	exit 1
+fi
+
+dynamic=~/Cloud/Notes/obsidian/Future/KnowledgeBase/Dynamic.md
+
+echo "" >> $dynamic
+echo "## ${KEY}" >> $dynamic
+echo "${VALUE}" >> $dynamic

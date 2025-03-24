@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+
+cd "${0%/*}"
+shopt -s nocaseglob
+
+cd ~/Cloud/Models/x_TEXTURES
+textureheaven=`echo textureheaven/*/*diff*` # Fails to match 5 textures... meh
+cc0=`echo cc0/*/*color*`
+
+textures="${textureheaven} ${cc0}"
+
+POSTFIX=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13 ; echo ''`
+CACHE_FILE="$HOME/.cache/tex_browse_cache_$POSTFIX.gqv"
+
+cat << EOF > $CACHE_FILE
+#Geeqie collection
+#created with Geeqie version 1.5.1
+#geometry: 966 14 940 1022
+EOF
+
+if [[ $# == 1 ]]; then
+	#textures=`echo $textures | tr ' ' '\n' | grep -i $1 | tr '\n' ' '`
+	textures=`echo $textures | tr ' ' '\n' | grep -i $1 | tr '\n' ' '`
+
+	for texture in $textures; do
+		echo "\"`realpath ${texture}`\"" >> $CACHE_FILE
+	done
+fi
+
+echo '#end' >> $CACHE_FILE
+
+geeqie -r file:$CACHE_FILE

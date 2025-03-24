@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+echo "Confirm installation"
+read
+
+[ -d /tmp/openspades ] && rm -r /tmp/openspades
+
+mkdir /tmp/openspades
+cd /tmp/openspades
+
+echo "Installing first mod"
+wget 'https://gamebanana.com/dl/204460'
+sudo cp '204460' '/usr/share/openspades/Resources/204460.pak'
+echo "Confirm ok"
+read
+
+echo "Installing second mod"
+wget 'https://gamebanana.com/dl/444700'
+mv '444700' '444700.rar'
+unrar x '444700.rar'
+sudo cp 'M4A1.zip' '/usr/share/openspades/Resources/M4A1.pak'
+echo "done"

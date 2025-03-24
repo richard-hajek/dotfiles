@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+wallpaper=`cat ~/Cloud/Pictures/Wallpapers/Log | tail -n 1`
+mkdir -p ~/Cloud/Pictures/Wallpapers-Retired/$wallpaper
+mv ~/Cloud/Pictures/Wallpapers/$wallpaper ~/Cloud/Pictures/Wallpapers-Retired/$wallpaper

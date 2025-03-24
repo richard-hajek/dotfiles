@@ -1,0 +1,76 @@
+#!/bin/sh -
+# Lists some statistics about the number of files in $HOME
+
+set -u
+
+readonly HOME=${HOME:-$(getent passwd "$(id -un)" | cut -d : -f 6)}
+
+inlist()
+{
+	for e in $2; do
+		# shellcheck disable=SC2254
+		case "$1" in ($e)
+			return
+		esac
+	done
+	false
+}
+
+die()
+{
+	retval=$(($1)); shift
+	# shellcheck disable=SC2059
+	{ printf "$@"; echo; } >&2
+	exit $retval
+}
+
+prompt_delete() {
+	printf '\nDelete %s ? [Y/n] ' "$1"
+	read -r a
+	test -t 0 || printf '\033[1;32m%s\033[0m\n' "$a"
+	case "$a" in
+		(''|Y*|y*) rm -rfv "$1" ;;
+		(N*|n*) ;;
+		(*) prompt_delete "$1" ;;
+	esac
+}
+
+# gather and show statistics:
+n_nondots=$(find "$HOME" -maxdepth 1 -mindepth 1 -name '[^.]*' | wc -l)
+n_dots=$(find "$HOME" -maxdepth 1 -mindepth 1 -name '.*' | wc -l)
+n_all=$((n_nondots + n_dots))
+cat <<- EOF
+total:        $n_all
+normal files: $n_nondots
+$(printf '\033[1m')dotfiles:     $n_dots$(printf '\033[0m')
+
+EOF
+
+# list dotfiles:
+cd "$HOME" || die 1 'Could not cd into home directory (%s)' "$HOME"
+if ! ls -1d --color=auto .[!.]*; then
+	die 1 'Could not list files in home directory (%s)' "$HOME"
+fi
+
+# automatic decisions for specific files/directories:
+keeplist='.anthy .local .pam_environment .mozilla .Xauthority .xprofile .zshrc .pki .ssh .bash_it .bashrc .cert .config .gitconfig .gitkeep .gitignore .inputrc .netrc .profile .pypirc .vim .wandb-api .unison .cache .pyenv .terraform.d .xonshrc .zprofile'
+deletelist='.ansible .ansible_galaxy .w3m .*_history .wget-hsts .*dump .zcompdump*'
+case "$(uname -n)" in
+	(gurke) keeplist="$keeplist .GA_ClientID .ICAClient" ;;
+	(srsyg*|vm-adfch-*) keeplist="$keeplist .bash_login .vault-token" ;;
+esac
+
+# delete:
+for d in .*; do
+	case "$d" in (.|..) continue ;; esac
+	if inlist "$d" "$keeplist"; then
+		# do not delete this file
+		continue
+	elif inlist "$d" "$deletelist"; then
+		# delete this file without asking
+		echo y | prompt_delete "$d"
+		continue
+	else
+		prompt_delete "$d"
+	fi
+done

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo efibootmgr --bootnext 0002
+sudo reboot

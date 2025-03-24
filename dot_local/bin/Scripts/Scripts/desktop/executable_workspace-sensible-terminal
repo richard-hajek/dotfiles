@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -e
+
+WORKSPACE=`i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d\" -f2`
+XTITLE=`xtitle`
+
+if [[ $WORKSPACE == 1 ]]; then
+
+  if [[ -f ~/.cache/active_ssh ]]; then
+    terminator -bm --new-tab -e "bash -li -c \"/usr/bin/ssh $(cat ~/.cache/active_ssh)\"" & 
+  else
+	  terminator -bm --new-tab &
+  fi
+else
+	kitty &
+fi
