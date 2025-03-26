@@ -14,6 +14,8 @@ if [[ ! -z ${ZSH+x} ]]; then
         git
         aws
         z
+        fzf
+        history-substring-search
     )
 
 	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
