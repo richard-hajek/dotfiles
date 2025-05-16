@@ -37,3 +37,19 @@ unsetopt share_history
 zstyle ':completion:*' completer _expand_alias _complete _ignored
 
 if [ -e /home/meowxiik/.nix-profile/etc/profile.d/nix.sh ]; then . /home/meowxiik/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/meowxiik/.local/share/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/meowxiik/.local/share/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/meowxiik/.local/share/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/meowxiik/.local/share/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

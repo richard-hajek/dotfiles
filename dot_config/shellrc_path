@@ -6,3 +6,4 @@ append_path /usr/local/bin
 append_path /home/meowxiik/.local/share/ngc-cli
 append_path /home/meowxiik/.dotnet/tools
 append_path /home/meowxiik/.local/share/cargo/bin
+append_path /home/meowxiik/.local/share/miniconda3/bin
