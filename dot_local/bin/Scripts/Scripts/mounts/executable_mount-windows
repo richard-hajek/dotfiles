@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 sudo mkdir -p /mnt/windows
-sudo mount /dev/sdb2 /mnt/windows
+sudo mount /dev/nvme0n1p3 /mnt/windows
