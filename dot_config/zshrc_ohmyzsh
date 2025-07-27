@@ -1,3 +1,8 @@
+# Fix the fucking uv run .... missing autocomplete
+function uvrun(){
+    uv run "$@"
+}
+
 unset ZSH
 if [[ -f /usr/share/oh-my-zsh/oh-my-zsh.sh ]]; then
 	export ZSH='/usr/share/oh-my-zsh'
