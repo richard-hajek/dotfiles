@@ -16,6 +16,7 @@ if [[ ! -z ${ZSH+x} ]]; then
         z
         fzf
         history-substring-search
+        zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
     )
 
 	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
