@@ -28,4 +28,6 @@ if [[ ! -z ${ZSH+x} ]]; then
 	typeset -gA ZSH_HIGHLIGHT_STYLES
 
 	source $ZSH/oh-my-zsh.sh
+
+    export ZSH_HIGHLIGHT_STYLES[cursor]='bg=black'
 fi

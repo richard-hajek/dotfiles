@@ -12,6 +12,16 @@ call plug#end()
 "The 'scrolloff' (scroll offset) option determines the number of context lines you would like to see above and below the cursor
 set so=7
 
+
+" Split pane moving
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+" clipboard nonsense
+set clipboard=unnamedplus
+
 set mouse=a
 
 " Sets how many lines of history VIM has to remember
