@@ -37,3 +37,14 @@ unsetopt share_history
 zstyle ':completion:*' completer _expand_alias _complete _ignored
 
 if [ -e /home/meowxiik/.nix-profile/etc/profile.d/nix.sh ]; then . /home/meowxiik/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# bun completions
+[ -s "/home/rhajek/.bun/_bun" ] && source "/home/rhajek/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bum
+export BUM_INSTALL="$HOME/.bum"
+export PATH="$BUM_INSTALL/bin:$PATH"
