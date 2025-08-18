@@ -39,6 +39,12 @@ au FocusGained,BufEnter * silent! checktime
 " Turn on wild menu
 set wildmenu
 
+" To make the completion menu pop up automatically as
+"		you type on the command line, use:
+autocmd CmdlineChanged [:/\?] call wildtrigger()
+set wildmode=noselect:lastused,full wildoptions=pum
+
+
 " wildmenu: Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
