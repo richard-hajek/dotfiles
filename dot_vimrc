@@ -43,6 +43,7 @@ set wildmenu
 "		you type on the command line, use:
 autocmd CmdlineChanged [:/\?] call wildtrigger()
 set wildmode=noselect:lastused,full wildoptions=pum
+set pumheight=20
 
 
 " wildmenu: Ignore compiled files
