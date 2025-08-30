@@ -25,3 +25,4 @@ source "$BASH_IT"/bash_it.sh
 
 source ~/.config/shellrc
 . "/home/meowxiik/.local/share/cargo/env"
+. "$HOME/.cargo/env"

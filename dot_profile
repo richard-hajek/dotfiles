@@ -12,3 +12,4 @@ if [[ $SHELL == "zsh" ]]; then
 fi
 . "$HOME/.rye/env"
 . "/home/meowxiik/.local/share/cargo/env"
+. "$HOME/.cargo/env"
