@@ -24,5 +24,3 @@ source "$BASH_IT"/bash_it.sh
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 source ~/.config/shellrc
-. "/home/meowxiik/.local/share/cargo/env"
-. "$HOME/.cargo/env"
