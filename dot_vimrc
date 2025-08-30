@@ -5,7 +5,7 @@ call plug#begin()
 " List your plugins here
 Plug 'tpope/vim-sensible'
 Plug 'https://github.com/hashivim/vim-terraform'
-Plug 'chrisbra/csv.vim'
+" Plug 'chrisbra/csv.vim'
 Plug 'wellle/context.vim'
 
 call plug#end()
