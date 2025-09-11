@@ -5,6 +5,10 @@
 # do NOT delete this line
 # gdb will NOT be able to start using debuginfod if this variable is not set beforehand
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
+export LS_COLORS="di=34:ln=36:so=35:pi=35:ex=32:bd=35:cd=35:su=32:sg=32:tw=34:ow=34"
+export BAT_STYLE="plain"
+export VCPKG_ROOT="$HOME/.local/share/vcpkg"
+
 
 if hash chezmoi &> /dev/null && hash notify-send &> /dev/null; then
 	( (
@@ -17,29 +21,16 @@ if hash chezmoi &> /dev/null && hash notify-send &> /dev/null; then
 	) & )
 fi
 
-export LS_COLORS="di=34:ln=36:so=35:pi=35:ex=32:bd=35:cd=35:su=32:sg=32:tw=34:ow=34"
-export BAT_STYLE="plain"
 
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
 	source /usr/share/nvm/init-nvm.sh
 fi
 
-#if [ -f /usr/share/z/z.sh  ]; then
-#    source /usr/share/z/z.sh
-#fi
 
 if hash zoxide &>/dev/null; then
     eval "$(zoxide init $(basename $SHELL))"
 fi
 
-if [ -d ~/.rye  ]; then
-    export PATH="$PATH:$HOME/.rye/shims"
-    source ~/.rye/env
-fi
-
-if hash pyenv &> /dev/null; then
-	eval "$(pyenv init -)"
-fi
 
 if [[ $SHELL == "/bin/zsh" ]]; then
     if hash aws &> /dev/null; then
@@ -47,12 +38,4 @@ if [[ $SHELL == "/bin/zsh" ]]; then
     fi 
 fi
 
-export VCPKG_ROOT=$HOME/.local/share/vcpkg
 
-
-#if [[ $USER == "rhajek" ]]; then
-#	( (
-#        cd /home/rhajek/Cloud/Projects/timelogger
-#        uv run /home/rhajek/Cloud/Projects/timelogger/logger.py --force-update
-#    ) & ) 
-#fi
