@@ -5,6 +5,7 @@
 # do NOT delete this line
 # gdb will NOT be able to start using debuginfod if this variable is not set beforehand
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
+
 export LS_COLORS="di=34:ln=36:so=35:pi=35:ex=32:bd=35:cd=35:su=32:sg=32:tw=34:ow=34"
 export BAT_STYLE="plain"
 export VCPKG_ROOT="$HOME/.local/share/vcpkg"
@@ -24,11 +25,15 @@ fi
 
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
 	source /usr/share/nvm/init-nvm.sh
+else
+    echo "${BASH_SOURCE}: nvm not found"
 fi
 
 
 if hash zoxide &>/dev/null; then
     eval "$(zoxide init $(basename $SHELL))"
+else
+    echo "${BASH_SOURCE}: zoxide not found"
 fi
 
 
