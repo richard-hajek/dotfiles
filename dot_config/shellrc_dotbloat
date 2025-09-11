@@ -1,3 +1,6 @@
+# Commented lines are desired but because they broke some functionality ( or seemingly ) I removed them
+# TODO: put back commented lines
+
 export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
 export APPCODE_PROPERTIES="$XDG_CONFIG_HOME/JetBrains/appcode.properties"
 #export CARGO_HOME="$XDG_DATA_HOME/cargo"
