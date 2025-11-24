@@ -9,6 +9,15 @@ append_path () {
     esac
 }
 
+prepend_path () {
+    case ":$PATH:" in 
+        *:"$1":*)
+            ;;
+        *)
+            PATH="$1${PATH:+$PATH:}"
+    esac
+}
+
 PATH="${PATH}"
 bin="${HOME}/.local/bin"
 
