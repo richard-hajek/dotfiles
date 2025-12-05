@@ -10,6 +10,8 @@ export LS_COLORS="di=34:ln=36:so=35:pi=35:ex=32:bd=35:cd=35:su=32:sg=32:tw=34:ow
 export BAT_STYLE="plain"
 export VCPKG_ROOT="$HOME/.local/share/vcpkg"
 
+export GEM_HOME="$HOME/.local/bundler"
+
 
 if hash chezmoi &> /dev/null && hash notify-send &> /dev/null; then
 	( (
