@@ -46,6 +46,7 @@
 
 [merge]
     conflictstyle = zdiff3 # Use 'diff3' if git version < 2.3
+    ff = only
 
 [fetch]
     prune = true
