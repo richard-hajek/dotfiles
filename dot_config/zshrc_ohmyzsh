@@ -15,6 +15,9 @@ if [[ ! -z ${ZSH+x} ]]; then
 	CASE_SENSITIVE="true"
     ZSHZ_CASE=ignore
 
+    typeset -A ZSH_HIGHLIGHT_STYLES
+    ZSH_HIGHLIGHT_STYLES[comment]='fg=yellow,dimmed'
+
 	plugins=(
         git
         aws
