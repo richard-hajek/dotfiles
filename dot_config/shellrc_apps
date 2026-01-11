@@ -13,17 +13,43 @@ export VCPKG_ROOT="$HOME/.local/share/vcpkg"
 export GEM_HOME="$HOME/.local/bundler"
 
 
-if hash chezmoi &> /dev/null && hash notify-send &> /dev/null; then
-	( (
-	OUTPUT=$(chezmoi status 2>&1)
+# This block checks for dotfile changes and pesters me to push them
+# The following lines will spawn in a subshell - their output will be through notify-send mostly
+( ( 
+
+MESSAGE=""
+
+if hash chezmoi &> /dev/null; then
+	OUTPUT="$(chezmoi status 2>&1)"
 
 	if [[ ! -z "${OUTPUT// }" ]]; then
-		notify-send "Chezmoi" "$OUTPUT"
+        MESSAGE="${OUTPUT}\n"
 	fi
-
-	) & )
 fi
 
+if [[ -d "${HOME}/.config/home-manager" ]] ; then
+    cd ~/.config/home-manager
+    UNSTAGED=$(git diff --numstat | wc -l)
+    UNCOMMITED=$(git diff --cached --numstat | wc -l)
+    UNPUSHED=$(git diff --numstat HEAD origin | wc -l)
+    ALL_CHANGES=$(( $UNSTAGED + $UNCOMMITED + $UNPUSHED )) 
+
+    if [[ ${ALL_CHANGES} != 0 ]]; then
+        MESSAGE="${MESSAGE}Some changes in home-manager config"
+    fi
+fi
+
+
+if [[ ${MESSAGE} != "" ]]; then
+    if hash notify-send &> /dev/null; then
+        notify-send "Dotfiles changes:" "${MESSAGE}"
+    else
+        echo "Dotfiles changes:\n" "${MESSAGE}"
+    fi
+fi
+
+
+) & ) 
 
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
 	source /usr/share/nvm/init-nvm.sh

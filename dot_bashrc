@@ -25,3 +25,4 @@ source "$BASH_IT"/bash_it.sh
 [ -f ~/.cargo/env ] && source ~/.cargo/env 
 
 source ~/.config/shellrc
+
