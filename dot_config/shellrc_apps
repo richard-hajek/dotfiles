@@ -27,15 +27,11 @@ fi
 
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
 	source /usr/share/nvm/init-nvm.sh
-else
-    echo "${BASH_SOURCE}: nvm not found"
 fi
 
 
 if hash zoxide &>/dev/null; then
     eval "$(zoxide init $(basename $SHELL))"
-else
-    echo "${BASH_SOURCE}: zoxide not found"
 fi
 
 

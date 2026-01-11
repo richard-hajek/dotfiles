@@ -22,6 +22,6 @@ source "$BASH_IT"/bash_it.sh
 
 [ -f ~/.inputrc  ] && bind -f ~/.inputrc
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.cargo/env ] && source ~/.cargo/env 
 
 source ~/.config/shellrc
-. "$HOME/.cargo/env"
