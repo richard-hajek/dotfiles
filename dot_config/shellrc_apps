@@ -4,7 +4,10 @@
 # https://wiki.archlinux.org/title/Debuginfod
 # do NOT delete this line
 # gdb will NOT be able to start using debuginfod if this variable is not set beforehand
-export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
+
+if lsb_release -si 2>/dev/null | grep -qi arch; then
+  export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
+fi
 
 export LS_COLORS="di=34:ln=36:so=35:pi=35:ex=32:bd=35:cd=35:su=32:sg=32:tw=34:ow=34"
 export BAT_STYLE="plain"
