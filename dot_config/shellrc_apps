@@ -70,4 +70,5 @@ if [[ $SHELL == "/bin/zsh" ]]; then
     fi 
 fi
 
-
+# https://meejah.ca/blog/wormhole-for-the-web
+alias winden="wormhole --relay-url wss://mailbox.mw.leastauthority.com/v1 --transit-helper tcp:relay.mw.leastauthority.com:4001"
