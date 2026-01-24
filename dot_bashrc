@@ -26,3 +26,6 @@ source "$BASH_IT"/bash_it.sh
 
 source ~/.config/shellrc
 
+if hash direnv &> /dev/null; then
+    eval "$(direnv hook $(basename $SHELL))"
+fi

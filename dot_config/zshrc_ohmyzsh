@@ -19,6 +19,7 @@ if [[ ! -z ${ZSH+x} ]]; then
     ZSH_HIGHLIGHT_STYLES[comment]='fg=yellow,dimmed'
 
 	plugins=(
+        direnv
         git
         aws
         fzf
