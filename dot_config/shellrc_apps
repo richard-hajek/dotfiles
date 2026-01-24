@@ -54,10 +54,6 @@ fi
 
 ) & ) 
 
-if hash direnv &> /dev/null; then
-    eval "$(direnv hook $(basename $SHELL))"
-fi
-
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
 	source /usr/share/nvm/init-nvm.sh
 fi
