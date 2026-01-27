@@ -1,19 +1,28 @@
-echo "Sourcing ~/.zshrc"
-
 [[ $- != *i* ]] && return
 
 [[ $ZSHRC_SOURCED == 1 ]] && return
 ZSHRC_SOURCED=1
 
+echo "Sourcing ~/.zshrc"
+
 autoload -Uz compinit
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
-source ~/.config/shellrc
+# First do ohmyzsh, it overwrites a lot of options
 source ~/.config/zshrc_ohmyzsh
-source ~/.config/shellrc_aliases # fucking ohmyzsh overwrites aliases
+source ~/.config/shellrc
+# source ~/.config/shellrc_aliases # fucking ohmyzsh overwrites aliases
 
+# When tab completing ignore case
+# When tab completing interchange -_
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' '+m:[-_]=[-_]'
 
+# These names are case insensitive and underscores are ignored.
+setopt COMPLETE_ALIASES
+# > Prevents aliases on the command line from being internally substituted before completion is attempted.  The effect is to make the alias a distinct command for completion purposes.
+setopt SHARE_HISTORY
+
+# Fancy --help
 if hash bat &> /dev/null; then
 
   function bathelp() {
@@ -30,10 +39,7 @@ if hash bat &> /dev/null; then
   alias -g -- --help='--help 2>&1 | bathelp'
 fi
 
-setopt extendedglob
-setopt COMPLETE_ALIASES
-setopt no_share_history
-unsetopt share_history
+# No idea what this is doing 
 zstyle ':completion:*' completer _expand_alias _complete _ignored
 
 if [ -e /home/meowxiik/.nix-profile/etc/profile.d/nix.sh ]; then . /home/meowxiik/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
@@ -48,3 +54,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # bum
 export BUM_INSTALL="$HOME/.bum"
 export PATH="$BUM_INSTALL/bin:$PATH"
+
+
+
