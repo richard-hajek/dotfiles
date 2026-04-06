@@ -9,3 +9,5 @@ _*.md
 meow_*
 devbox.json
 devbox.lock
+.gemini
+GEMINI.md

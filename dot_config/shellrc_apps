@@ -72,3 +72,12 @@ fi
 
 # https://meejah.ca/blog/wormhole-for-the-web
 alias winden="wormhole --relay-url wss://mailbox.mw.leastauthority.com/v1 --transit-helper tcp:relay.mw.leastauthority.com:4001"
+
+# https://yazi-rs.github.io/docs/quick-start
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
