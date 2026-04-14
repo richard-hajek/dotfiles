@@ -28,7 +28,7 @@ x-scheme-handler/mid=userapp-Thunderbird-6JMOI1.desktop;userapp-Thunderbird-E93U
 x-scheme-handler/mongodb=mongodb-compass.desktop;MongoDB Compass.desktop;
 x-scheme-handler/mongodb+srv=mongodb-compass.desktop;MongoDB Compass.desktop;
 x-scheme-handler/slack=slack.desktop;
-x-scheme-handler/obsidian=obsidian.desktop;
+x-scheme-handler/obsidian=obsidian.desktop;electron.desktop;
 
 [Default Applications]
 application/rdf+xml=gvim.desktop
