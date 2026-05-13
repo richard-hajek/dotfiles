@@ -30,19 +30,6 @@ if hash chezmoi &> /dev/null; then
 	fi
 fi
 
-if [[ -d "${HOME}/.config/home-manager" ]] ; then
-    cd ~/.config/home-manager
-    UNSTAGED=$(git diff --numstat | wc -l)
-    UNCOMMITED=$(git diff --cached --numstat | wc -l)
-    UNPUSHED=$(git diff --numstat HEAD origin | wc -l)
-    ALL_CHANGES=$(( $UNSTAGED + $UNCOMMITED + $UNPUSHED )) 
-
-    if [[ ${ALL_CHANGES} != 0 ]]; then
-        MESSAGE="${MESSAGE}Some changes in home-manager config"
-    fi
-fi
-
-
 if [[ ${MESSAGE} != "" ]]; then
     if hash notify-send &> /dev/null; then
         notify-send "Dotfiles changes:" "${MESSAGE}"
