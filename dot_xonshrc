@@ -1,4 +1,0 @@
-# XONSH WEBCONFIG START
-$PROMPT = '{env_name}{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE} {cwd}{branch_color}{curr_branch: {}}{RESET} {BOLD_BLUE}{prompt_end}{RESET} '
-xontrib load coreutils
-# XONSH WEBCONFIG END
