@@ -1,8 +1,4 @@
-alias ascii="grep --color='auto' -P -n \"[\x80-\xFF]\""
-alias batman="bat --language man"
 alias dc="docker compose"
-alias fsstrace="strace -e trace=open,openat,close,read,write,connect,accept"
-alias git_slow="git config --add oh-my-zsh.hide-status 1"
 alias grep="grep --color=auto"
 alias hard_clear="printf '\033[2J\033[3J\033[1;1H'"
 alias l="ls -l"
@@ -13,24 +9,7 @@ alias llah="ls -lah"
 alias llh="ls -lh"
 alias ls='ls --color=auto --group-directories-first -X'
 alias lzd="lazydocker"
-alias pbash="env -i sudo -u meowxiik /usr/bin/bash --rcfile /home/meowxiik/.config/shellrc_build --noprofile"
-alias rm="rm --one-file-system"
 alias sctl="systemctl"
 alias sctlu="systemctl --user"
-alias sdr="systemctl daemon-reload"
-# alias sudo='sudo -E ' # https://stackoverflow.com/questions/37209913/how-does-alias-sudo-sudo-work
-alias task="go-task"
 alias tf="terraform"
 alias otf="tofu"
-alias todo="todo.sh"
-alias walr="cat /home/meowxiik/.cache/wal/sequences"
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
-alias yay="PKGEXT=.pkg.tar yay"
-alias yayforce="yay --mflags \"--nocheck --skippgpcheck --skipchecksums\""
-
-# SP  ' '  0x20 = · U+00B7 Middle Dot
-# TAB '\t' 0x09 = ￫ U+FFEB Halfwidth Rightwards Arrow
-# CR  '\r' 0x0D = § U+00A7 Section Sign (⏎ U+23CE also works fine)
-# LF  '\n' 0x0A = ¶ U+00B6 Pilcrow Sign (was "Paragraph Sign")
-# I have never in my life used this command lol
-alias whitespace="sed 's/ /·/g;s/\t/￫/g;s/\r/§/g;s/$/¶/g'"

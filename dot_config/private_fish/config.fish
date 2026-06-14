@@ -10,8 +10,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     zoxide init fish | source
 
-    # lorri hook fish | source
-
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
         command yazi $argv --cwd-file="$tmp"
