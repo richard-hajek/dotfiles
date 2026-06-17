@@ -10,6 +10,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     zoxide init fish | source
 
+    source ~/.config/shellrc_aliases
+    source ~/.config/shellrc_defaults
+
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
         command yazi $argv --cwd-file="$tmp"

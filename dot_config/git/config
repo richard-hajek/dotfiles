@@ -91,3 +91,6 @@
 [alias]
     deploy = "!f() { git tag --force \"$1\" && git push origin --force \"$1\"; }; f"
 
+[safe]
+	directory = /etc/nixos
+	directory = /home/common/Cloud/Notes/Notes
