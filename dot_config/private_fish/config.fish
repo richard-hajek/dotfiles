@@ -1,5 +1,6 @@
 if status is-interactive
-    
+    # Commands to run in interactive sessions can go here
+
     # Aliases
     alias lzd="lazydocker"
     alias dc="docker-compose"
@@ -7,8 +8,9 @@ if status is-interactive
     # https://stackoverflow.com/questions/13995857/suppress-or-customize-intro-message-in-fish-shell
     set fish_greeting
 
-    # Commands to run in interactive sessions can go here
-    zoxide init fish | source
+    if type -q zoxide
+        zoxide init fish | source
+    end
 
     source ~/.config/shellrc_aliases
     source ~/.config/shellrc_defaults
