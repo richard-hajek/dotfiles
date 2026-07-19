@@ -12,6 +12,13 @@ if status is-interactive
         zoxide init fish | source
     end
 
+    if type -q direnv-instant; 
+        direnv-instant hook fish | source
+    else if type -q direnv;
+        echo "direnv-instant not found, trying direnv..."
+        direnv hook fish | source
+    end
+
     source ~/.config/shellrc_aliases
     source ~/.config/shellrc_defaults
 
